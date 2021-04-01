@@ -1,0 +1,366 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E40ADFDF2615080C00B59900 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40ADFDE2615080C00B59900 /* User.swift */; };
+		E4126CDA261531BA0085702F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4126CD9261531BA0085702F /* HomeViewModel.swift */; };
+		E42BDCA0258B279B0088DB09 /* UBlockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42BDC9F258B279B0088DB09 /* UBlockApp.swift */; };
+		E42BDCA2258B279B0088DB09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42BDCA1258B279B0088DB09 /* ContentView.swift */; };
+		E42BDCA4258B279C0088DB09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42BDCA3258B279C0088DB09 /* Assets.xcassets */; };
+		E42BDCA7258B279C0088DB09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42BDCA6258B279C0088DB09 /* Preview Assets.xcassets */; };
+		E47DFE262615905E0055D770 /* AlphabetizedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DFE252615905E0055D770 /* AlphabetizedList.swift */; };
+		E47DFE292615910E0055D770 /* AppFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DFE282615910E0055D770 /* AppFile.swift */; };
+		E47DFE2C261595690055D770 /* Nameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DFE2B261595690055D770 /* Nameable.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E40ADFDE2615080C00B59900 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E4126CD9261531BA0085702F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E42BDC9C258B279B0088DB09 /* UBlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UBlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E42BDC9F258B279B0088DB09 /* UBlockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBlockApp.swift; sourceTree = "<group>"; };
+		E42BDCA1258B279B0088DB09 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E42BDCA3258B279C0088DB09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E42BDCA6258B279C0088DB09 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E42BDCA8258B279C0088DB09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E42BDCA9258B279C0088DB09 /* UBlock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UBlock.entitlements; sourceTree = "<group>"; };
+		E47DFE252615905E0055D770 /* AlphabetizedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetizedList.swift; sourceTree = "<group>"; };
+		E47DFE282615910E0055D770 /* AppFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFile.swift; sourceTree = "<group>"; };
+		E47DFE2B261595690055D770 /* Nameable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nameable.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E42BDC99258B279B0088DB09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E4126CD62615120E0085702F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E40ADFDE2615080C00B59900 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E42BDC93258B279B0088DB09 = {
+			isa = PBXGroup;
+			children = (
+				E42BDC9E258B279B0088DB09 /* UBlock */,
+				E42BDC9D258B279B0088DB09 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E42BDC9D258B279B0088DB09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E42BDC9C258B279B0088DB09 /* UBlock.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E42BDC9E258B279B0088DB09 /* UBlock */ = {
+			isa = PBXGroup;
+			children = (
+				E42BDC9F258B279B0088DB09 /* UBlockApp.swift */,
+				E42BDCA1258B279B0088DB09 /* ContentView.swift */,
+				E4126CD9261531BA0085702F /* HomeViewModel.swift */,
+				E47DFE252615905E0055D770 /* AlphabetizedList.swift */,
+				E47DFE282615910E0055D770 /* AppFile.swift */,
+				E47DFE2B261595690055D770 /* Nameable.swift */,
+				E4126CD62615120E0085702F /* Model */,
+				E42BDCA3258B279C0088DB09 /* Assets.xcassets */,
+				E42BDCA8258B279C0088DB09 /* Info.plist */,
+				E42BDCA9258B279C0088DB09 /* UBlock.entitlements */,
+				E42BDCA5258B279C0088DB09 /* Preview Content */,
+			);
+			path = UBlock;
+			sourceTree = "<group>";
+		};
+		E42BDCA5258B279C0088DB09 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E42BDCA6258B279C0088DB09 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E42BDC9B258B279B0088DB09 /* UBlock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E42BDCAC258B279C0088DB09 /* Build configuration list for PBXNativeTarget "UBlock" */;
+			buildPhases = (
+				E42BDC98258B279B0088DB09 /* Sources */,
+				E42BDC99258B279B0088DB09 /* Frameworks */,
+				E42BDC9A258B279B0088DB09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UBlock;
+			productName = UBlock;
+			productReference = E42BDC9C258B279B0088DB09 /* UBlock.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E42BDC94258B279B0088DB09 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					E42BDC9B258B279B0088DB09 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = E42BDC97258B279B0088DB09 /* Build configuration list for PBXProject "UBlock" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E42BDC93258B279B0088DB09;
+			productRefGroup = E42BDC9D258B279B0088DB09 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E42BDC9B258B279B0088DB09 /* UBlock */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E42BDC9A258B279B0088DB09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E42BDCA7258B279C0088DB09 /* Preview Assets.xcassets in Resources */,
+				E42BDCA4258B279C0088DB09 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E42BDC98258B279B0088DB09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E42BDCA2258B279B0088DB09 /* ContentView.swift in Sources */,
+				E4126CDA261531BA0085702F /* HomeViewModel.swift in Sources */,
+				E47DFE262615905E0055D770 /* AlphabetizedList.swift in Sources */,
+				E42BDCA0258B279B0088DB09 /* UBlockApp.swift in Sources */,
+				E40ADFDF2615080C00B59900 /* User.swift in Sources */,
+				E47DFE2C261595690055D770 /* Nameable.swift in Sources */,
+				E47DFE292615910E0055D770 /* AppFile.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E42BDCAA258B279C0088DB09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E42BDCAB258B279C0088DB09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		E42BDCAD258B279C0088DB09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = UBlock/UBlock.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"UBlock/Preview Content\"";
+				DEVELOPMENT_TEAM = W9299UY4N9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = UBlock/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = carrism.UBlock;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E42BDCAE258B279C0088DB09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = UBlock/UBlock.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"UBlock/Preview Content\"";
+				DEVELOPMENT_TEAM = W9299UY4N9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = UBlock/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = carrism.UBlock;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E42BDC97258B279B0088DB09 /* Build configuration list for PBXProject "UBlock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E42BDCAA258B279C0088DB09 /* Debug */,
+				E42BDCAB258B279C0088DB09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E42BDCAC258B279C0088DB09 /* Build configuration list for PBXNativeTarget "UBlock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E42BDCAD258B279C0088DB09 /* Debug */,
+				E42BDCAE258B279C0088DB09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E42BDC94258B279B0088DB09 /* Project object */;
+}
