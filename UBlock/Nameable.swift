@@ -10,3 +10,7 @@ import Foundation
 protocol Nameable {
     var name: String { get set }
 }
+
+protocol Indexed {
+    var id: Int { get set }
+}

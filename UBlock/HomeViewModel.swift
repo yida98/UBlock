@@ -23,7 +23,7 @@ class HomeViewModel: ObservableObject {
     
     private var cancellableSet: Set<AnyCancellable> = []
     
-    func findApps() {
+    private func findApps() {
         let fileManager = FileManager.default
         do {
             let applicationsURL = fileManager.urls(for: .applicationDirectory, in: .systemDomainMask)
@@ -41,6 +41,7 @@ class HomeViewModel: ObservableObject {
 
                     }, receiveValue: {
                         self.apps.insert(AppFile(name: fileManager.displayName(atPath: url.path), image: $0))
+                        self.apps.reindex()
                     })
                     .store(in: &cancellableSet)
             }
