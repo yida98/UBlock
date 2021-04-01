@@ -13,6 +13,7 @@
 		E42BDCA2258B279B0088DB09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42BDCA1258B279B0088DB09 /* ContentView.swift */; };
 		E42BDCA4258B279C0088DB09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42BDCA3258B279C0088DB09 /* Assets.xcassets */; };
 		E42BDCA7258B279C0088DB09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42BDCA6258B279C0088DB09 /* Preview Assets.xcassets */; };
+		E479BC3C26167CC500292B18 /* URL+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E479BC3B26167CC500292B18 /* URL+ext.swift */; };
 		E47DFE262615905E0055D770 /* AlphabetizedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DFE252615905E0055D770 /* AlphabetizedList.swift */; };
 		E47DFE292615910E0055D770 /* AppFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DFE282615910E0055D770 /* AppFile.swift */; };
 		E47DFE2C261595690055D770 /* Named+Indexed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DFE2B261595690055D770 /* Named+Indexed.swift */; };
@@ -29,6 +30,7 @@
 		E42BDCA6258B279C0088DB09 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E42BDCA8258B279C0088DB09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E42BDCA9258B279C0088DB09 /* UBlock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UBlock.entitlements; sourceTree = "<group>"; };
+		E479BC3B26167CC500292B18 /* URL+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+ext.swift"; sourceTree = "<group>"; };
 		E47DFE252615905E0055D770 /* AlphabetizedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetizedList.swift; sourceTree = "<group>"; };
 		E47DFE282615910E0055D770 /* AppFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFile.swift; sourceTree = "<group>"; };
 		E47DFE2B261595690055D770 /* Named+Indexed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Named+Indexed.swift"; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				E4126CD9261531BA0085702F /* HomeViewModel.swift */,
 				E47DFE252615905E0055D770 /* AlphabetizedList.swift */,
 				E47DFE282615910E0055D770 /* AppFile.swift */,
+				E479BC3B26167CC500292B18 /* URL+ext.swift */,
 				E47DFE2F2615AC070055D770 /* Constants.swift */,
 				E47DFE2B261595690055D770 /* Named+Indexed.swift */,
 				E4126CD62615120E0085702F /* Model */,
@@ -173,6 +176,7 @@
 				E40ADFDF2615080C00B59900 /* User.swift in Sources */,
 				E47DFE2C261595690055D770 /* Named+Indexed.swift in Sources */,
 				E47DFE292615910E0055D770 /* AppFile.swift in Sources */,
+				E479BC3C26167CC500292B18 /* URL+ext.swift in Sources */,
 				E47DFE302615AC070055D770 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
