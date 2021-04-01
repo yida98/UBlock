@@ -45,6 +45,10 @@ extension AlphabetizedList {
     }
 }
 
+extension AlphabetizedList: RandomAccessCollection {
+    
+}
+
 extension AlphabetizedList where T: Indexed {
     
     mutating func reindex() {

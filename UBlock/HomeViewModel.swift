@@ -13,7 +13,6 @@ import QuickLookThumbnailing
 class HomeViewModel: ObservableObject {
     
     var apps: AlphabetizedList<AppFile>
-//    private var publisher: AnyPublisher<[NSMetadataItem], Never>
     let query = NSMetadataQuery()
     
     init() {

@@ -15,7 +15,7 @@ struct ContentView: View {
         Text("Hello, world!")
             .padding()
         ForEach(viewModel.apps, id: \.self) { app in
-            Image(nsImage: app.image)
+            Image(nsImage: app.image ?? NSImage(contentsOf: Constants.sampleIconURL)!)
         }
     }
 }
