@@ -14,8 +14,11 @@ struct ContentView: View {
     var body: some View {
         Text("Hello, world!")
             .padding()
-        ForEach(viewModel.apps, id: \.self) { app in
-            Image(nsImage: app.image ?? NSImage(contentsOf: Constants.sampleIconURL)!)
+        ScrollView {
+            ForEach(viewModel.apps, id: \.self) { app in
+                Image(nsImage: app.image ?? NSImage(contentsOf: Constants.sampleIconURL)!)
+                Text(app.name)
+            }
         }
     }
 }

@@ -24,35 +24,41 @@ class HomeViewModel: ObservableObject {
     
     private func findApps() {
         let fileManager = FileManager.default
-        do {
-            let applicationsURL = fileManager.urls(for: .applicationDirectory, in: .systemDomainMask)
-            let results = try fileManager.contentsOfDirectory(at: applicationsURL[0], includingPropertiesForKeys: [URLResourceKey.thumbnailKey], options: FileManager.DirectoryEnumerationOptions.skipsHiddenFiles)
-            print(results)
-            for url in results {
-                generateThumbnail(for: url)
-                    .sink(receiveCompletion: { (completion) in
-                        switch completion {
-                            case .failure:
-                                debugPrint("[ERROR] Thumbnail generation error!!")
-                            case .finished:
-                                debugPrint("Finished generating thumbnail...")
-                        }
+        
+        let applicationsURLs = fileManager.urls(for: .allApplicationsDirectory, in: .allDomainsMask)
+        let filteredURLs = applicationsURLs.filter { fileManager.fileExists(atPath: $0.path) }
+        for filteredURL in filteredURLs {
+            do {
+                let results = try fileManager.contentsOfDirectory(at: filteredURL, includingPropertiesForKeys: [URLResourceKey.thumbnailKey], options: FileManager.DirectoryEnumerationOptions.skipsHiddenFiles)
+                let filteredResults = results.filter { $0.path.hasSuffix(".app") }
 
-                    }, receiveValue: {
-                        self.apps.insert(AppFile(name: fileManager.displayName(atPath: url.path), image: $0))
-                        self.apps.reindex()
-                    })
-                    .store(in: &cancellableSet)
+                for url in filteredResults {
+                    generateThumbnail(for: url)
+                        .sink(receiveCompletion: { (completion) in
+                            switch completion {
+                                case .failure:
+                                    debugPrint("[ERROR] Thumbnail generation error!!")
+                                case .finished:
+                                    debugPrint("Finished generating thumbnail...")
+                            }
+
+                        }, receiveValue: {
+                            self.apps.insert(AppFile(name: fileManager.displayName(atPath: url.path), image: $0))
+                            self.apps.reindex()
+                        })
+                        .store(in: &cancellableSet)
+                }
+            } catch {
+                print("Error at \(filteredURL)! \(error)")
             }
-        } catch {
-            print("Error! \(error)")
         }
+        
     }
     
     private func generateThumbnail(for url: URL) -> AnyPublisher<NSImage, Error> {
         return Future<NSImage, Error> { promise in
             
-            let size: CGSize = CGSize(width: 60, height: 90)
+            let size: CGSize = CGSize(width: 10, height: 90)
             
             // Create the thumbnail request.
             let request = QLThumbnailGenerator.Request(fileAt: url,
@@ -61,14 +67,11 @@ class HomeViewModel: ObservableObject {
                                                        representationTypes: .all)
             
             let generator = QLThumbnailGenerator.shared
-            generator.generateRepresentations(for: request) { (thumbnail, type, error) in
-                if let tn = thumbnail {
-                    promise(.success(tn.nsImage))
-                } else if thumbnail == nil || error != nil {
-                    // Handle the error case gracefully.
-                    if let er = error {
-                        promise(.failure(er))
-                    }
+            generator.generateBestRepresentation(for: request) { (thumbnailRepresentation, error) in
+                if let thumbnail = thumbnailRepresentation {
+                    promise(.success(thumbnail.nsImage))
+                } else if let er = error {
+                    promise(.failure(er))
                 }
             }
 
@@ -95,4 +98,11 @@ class HomeViewModel: ObservableObject {
 //        }
 //    }
 //
+}
+
+extension URL {
+    var isDirectory: Bool {
+        let values = try? resourceValues(forKeys: [.isDirectoryKey])
+        return values?.isDirectory ?? false
+    }
 }
