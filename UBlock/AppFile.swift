@@ -8,7 +8,7 @@
 import Foundation
 import AppKit
 
-struct AppFile: Nameable, Indexed {
+struct AppFile: Named, Indexed {
     var name: String
     var image: NSImage?
     var id: Int = 0

@@ -15,7 +15,7 @@
 		E42BDCA7258B279C0088DB09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42BDCA6258B279C0088DB09 /* Preview Assets.xcassets */; };
 		E47DFE262615905E0055D770 /* AlphabetizedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DFE252615905E0055D770 /* AlphabetizedList.swift */; };
 		E47DFE292615910E0055D770 /* AppFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DFE282615910E0055D770 /* AppFile.swift */; };
-		E47DFE2C261595690055D770 /* Nameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DFE2B261595690055D770 /* Nameable.swift */; };
+		E47DFE2C261595690055D770 /* Named+Indexed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DFE2B261595690055D770 /* Named+Indexed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,7 @@
 		E42BDCA9258B279C0088DB09 /* UBlock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UBlock.entitlements; sourceTree = "<group>"; };
 		E47DFE252615905E0055D770 /* AlphabetizedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetizedList.swift; sourceTree = "<group>"; };
 		E47DFE282615910E0055D770 /* AppFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFile.swift; sourceTree = "<group>"; };
-		E47DFE2B261595690055D770 /* Nameable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nameable.swift; sourceTree = "<group>"; };
+		E47DFE2B261595690055D770 /* Named+Indexed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Named+Indexed.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,7 @@
 				E4126CD9261531BA0085702F /* HomeViewModel.swift */,
 				E47DFE252615905E0055D770 /* AlphabetizedList.swift */,
 				E47DFE282615910E0055D770 /* AppFile.swift */,
-				E47DFE2B261595690055D770 /* Nameable.swift */,
+				E47DFE2B261595690055D770 /* Named+Indexed.swift */,
 				E4126CD62615120E0085702F /* Model */,
 				E42BDCA3258B279C0088DB09 /* Assets.xcassets */,
 				E42BDCA8258B279C0088DB09 /* Info.plist */,
@@ -168,7 +168,7 @@
 				E47DFE262615905E0055D770 /* AlphabetizedList.swift in Sources */,
 				E42BDCA0258B279B0088DB09 /* UBlockApp.swift in Sources */,
 				E40ADFDF2615080C00B59900 /* User.swift in Sources */,
-				E47DFE2C261595690055D770 /* Nameable.swift in Sources */,
+				E47DFE2C261595690055D770 /* Named+Indexed.swift in Sources */,
 				E47DFE292615910E0055D770 /* AppFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

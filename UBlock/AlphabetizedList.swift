@@ -8,7 +8,7 @@
 import Foundation
 import AppKit
 
-struct AlphabetizedList<T: Nameable> {
+struct AlphabetizedList<T: Named> {
     typealias AlphaType = [T]
     
     private var alphaList: AlphaType

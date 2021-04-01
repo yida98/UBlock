@@ -1,5 +1,5 @@
 //
-//  Nameable.swift
+//  Named+Indexed.swift
 //  UBlock
 //
 //  Created by Yida Zhang on 2021-03-31.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Nameable {
+protocol Named {
     var name: String { get set }
 }
 
