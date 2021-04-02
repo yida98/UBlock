@@ -60,6 +60,27 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E42A27BC2616FA430019D941 /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				E479BC3F26169CA900292B18 /* Queue.swift */,
+				E47DFE2B261595690055D770 /* Named+Indexed.swift */,
+				E47DFE252615905E0055D770 /* AlphabetizedList.swift */,
+				E47DFE282615910E0055D770 /* AppFile.swift */,
+			);
+			path = "Data Structures";
+			sourceTree = "<group>";
+		};
+		E42A27BE2616FA8A0019D941 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E479BC422616C64B00292B18 /* FileManager+ext.swift */,
+				E479BC3B26167CC500292B18 /* URL+ext.swift */,
+				E47DFE2F2615AC070055D770 /* Constants.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		E42BDC93258B279B0088DB09 = {
 			isa = PBXGroup;
 			children = (
@@ -82,13 +103,8 @@
 				E42BDC9F258B279B0088DB09 /* UBlockApp.swift */,
 				E42BDCA1258B279B0088DB09 /* ContentView.swift */,
 				E4126CD9261531BA0085702F /* HomeViewModel.swift */,
-				E47DFE252615905E0055D770 /* AlphabetizedList.swift */,
-				E479BC422616C64B00292B18 /* FileManager+ext.swift */,
-				E47DFE282615910E0055D770 /* AppFile.swift */,
-				E479BC3B26167CC500292B18 /* URL+ext.swift */,
-				E47DFE2F2615AC070055D770 /* Constants.swift */,
-				E479BC3F26169CA900292B18 /* Queue.swift */,
-				E47DFE2B261595690055D770 /* Named+Indexed.swift */,
+				E42A27BC2616FA430019D941 /* Data Structures */,
+				E42A27BE2616FA8A0019D941 /* Helper */,
 				E4126CD62615120E0085702F /* Model */,
 				E42BDCA3258B279C0088DB09 /* Assets.xcassets */,
 				E42BDCA8258B279C0088DB09 /* Info.plist */,

@@ -66,7 +66,7 @@ extension URL {
                 return icon
             }
         } catch {
-            print(error)
+            debugPrint(error)
         }
         return nil
     }
