@@ -11,4 +11,10 @@ struct Constants {
     
     static let directoryPath: String = FileManager.default.currentDirectoryPath
     static let sampleIconURL: URL = URL(fileURLWithPath: directoryPath+"Sample.jpeg")
+    
+}
+
+enum CFBundleKey: String {
+    case CFBundleIconFile
+    case CFBundleIconName
 }

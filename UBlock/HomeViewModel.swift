@@ -44,18 +44,33 @@ class HomeViewModel: ObservableObject {
     
     private func getAppIcon(url: URL) -> NSImage {
         if let infoPlistURL = findInfoPlist(appURL: url) {
-            if let iconName = getPlistObject(infoPlistURL, key: "CFBundleIconFile") as? String {
+            var name: String?
+            if let iFile = getPlistObject(infoPlistURL, key: CFBundleKey.CFBundleIconFile.rawValue) as? String {
+                name = iFile
+            } else if let iName = getPlistObject(infoPlistURL, key: CFBundleKey.CFBundleIconName.rawValue) as? String {
+                name = iName
+            }
+            if let iconName = name {
                 var iconRule = FileRule(value: iconName, rule: .endsWith)
                 if !iconName.hasSuffix(".icns") {
                     iconRule = FileRule(value: iconName+".icns", rule: .endsWith)
                 }
                 
                 if let iconURL = fileManager.recursiveGetFirstOccurence(url, matchRules: [iconRule]) {
-                    return iconURL.asNSImage() ?? NSImage()
+                    if let image = iconURL.asNSImage() {
+                        return image
+                    } else { debugPrint("[ERROR] Could not produce image from \(iconURL.path)!!")}
+                } else {
+                    let wildIconRule = FileRule(value: ".icns", rule: .endsWith)
+                    if let iconURL = fileManager.recursiveGetFirstOccurence(url, matchRules: [wildIconRule]) {
+                        if let image = iconURL.asNSImage() {
+                            return image
+                        } else { debugPrint("[ERROR] Could not produce image from \(iconURL.path)!!")}
+                    }
+                    debugPrint("[ERROR] Could not find \(iconName) for \(url)")
                 }
+                
             }
-        } else {
-            debugPrint("[ERROR] \(url.path) has no info.plist!!")
         }
         
         return NSImage()
@@ -63,10 +78,10 @@ class HomeViewModel: ObservableObject {
     
     private func findInfoPlist(appURL: URL) -> URL? {
         
-        let rule = FileRule(value: "Info.plist", rule: .endsWith)
+        let rule = FileRule(value: "/Info.plist", rule: .endsWith)
         
         let result = fileManager.recursiveGetFirstOccurence(appURL, matchRules: [rule])
-        
+        if result == nil { debugPrint("[ERROR] \(appURL) HAS NO INFO.PLIST!!") }
         return result
     }
     
@@ -79,49 +94,3 @@ class HomeViewModel: ObservableObject {
     }
 }
 
-extension FileManager {
-    
-    func getContents(_ url: URL, with components: String = "",propertiesForKeys: [URLResourceKey]?, options: DirectoryEnumerationOptions) -> [URL] {
-        var fullURL = url
-        fullURL.appendPathComponent(components)
-        do {
-            let contents = try self.contentsOfDirectory(at: fullURL, includingPropertiesForKeys: propertiesForKeys, options: options)
-            return contents
-        } catch {
-            debugPrint("Error")
-        }
-        return [URL]()
-    }
-    
-    func recursiveGetFirstOccurence(_ url: URL, matchRules: [FileRule]) -> URL? {
-        let queue = Queue<URL>()
-        queue.enqueue(url)
-        while !queue.isEmpty {
-            if let item = queue.dequeue() {
-                if item.matches(matchRules: matchRules) { return item }
-                if item.isDirectory {
-                    queue.enqueue(getContents(item, propertiesForKeys: [], options: []))
-                }
-            }
-        }
-
-        return nil
-    }
-    
-    func recursiveGetContents(_ url: URL, matchRules: [FileRule]) -> [URL] {
-        var result = [URL]()
-        let contents = getContents(url, propertiesForKeys: [], options: [])
-        
-        for content in contents {
-            if content.isDirectory {
-                result.append(contentsOf: recursiveGetContents(content, matchRules: matchRules))
-            }
-            if content.matches(matchRules: matchRules) {
-                result.append(content)
-            }
-        }
-        
-        return result
-    }
-    
-}
