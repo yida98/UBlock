@@ -43,15 +43,19 @@ class HomeViewModel: ObservableObject {
     }
     
     private func getAppIcon(url: URL) -> NSImage {
-        guard let infoPlistURL = findInfoPlist(appURL: url) else {
-            fatalError("[ERROR] \(url.path) has no info.plist!!")
-        }
-        
-        if let iconName = getPlistObject(infoPlistURL, key: "CFBundleIconFile") as? String {
-            let iconRule = FileRule(value: iconName, rule: .endsWith)
-            if let iconURL = fileManager.recursiveGetFirstOccurence(url, matchRules: [iconRule]) {
-                return iconURL.asNSImage() ?? NSImage()
+        if let infoPlistURL = findInfoPlist(appURL: url) {
+            if let iconName = getPlistObject(infoPlistURL, key: "CFBundleIconFile") as? String {
+                var iconRule = FileRule(value: iconName, rule: .endsWith)
+                if !iconName.hasSuffix(".icns") {
+                    iconRule = FileRule(value: iconName+".icns", rule: .endsWith)
+                }
+                
+                if let iconURL = fileManager.recursiveGetFirstOccurence(url, matchRules: [iconRule]) {
+                    return iconURL.asNSImage() ?? NSImage()
+                }
             }
+        } else {
+            debugPrint("[ERROR] \(url.path) has no info.plist!!")
         }
         
         return NSImage()
@@ -90,15 +94,17 @@ extension FileManager {
     }
     
     func recursiveGetFirstOccurence(_ url: URL, matchRules: [FileRule]) -> URL? {
-        let contents = getContents(url, propertiesForKeys: [], options: [])
-        
-        for content in contents {
-            if url.matches(matchRules: matchRules) { return url }
-            if content.isDirectory {
-                return recursiveGetFirstOccurence(url, matchRules: matchRules)
+        let queue = Queue<URL>()
+        queue.enqueue(url)
+        while !queue.isEmpty {
+            if let item = queue.dequeue() {
+                if item.matches(matchRules: matchRules) { return item }
+                if item.isDirectory {
+                    queue.enqueue(getContents(item, propertiesForKeys: [], options: []))
+                }
             }
         }
-        
+
         return nil
     }
     
@@ -110,7 +116,7 @@ extension FileManager {
             if content.isDirectory {
                 result.append(contentsOf: recursiveGetContents(content, matchRules: matchRules))
             }
-            if url.matches(matchRules: matchRules) {
+            if content.matches(matchRules: matchRules) {
                 result.append(content)
             }
         }

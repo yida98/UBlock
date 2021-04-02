@@ -10,7 +10,6 @@ import AppKit
 
 extension URL {
     var isDirectory: Bool {
-        print(self.path)
         let values = try? resourceValues(forKeys: [.isDirectoryKey])
         return values?.isDirectory ?? false
     }
