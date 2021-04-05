@@ -36,11 +36,23 @@ class HomeViewModel: ObservableObject {
                     apps.insert(AppFile(name: fileManager.displayName(atPath: appURL.path), image: getAppIcon(url: appURL)))
                 }
             } catch {
-                print("Error at \(filteredURL)! \(error)")
+                print("[ERROR] \(filteredURL)! \(error)")
             }
         }
         
     }
+    
+    private func killProcess() {
+        let process = Process()
+        
+        let runningApps = NSWorkspace().runningApplications
+        
+        
+    }
+}
+
+// MARK: Retrieve Apps
+extension HomeViewModel {
     
     private func getAppIcon(url: URL) -> NSImage {
         if let infoPlistURL = findInfoPlist(appURL: url) {
@@ -92,5 +104,5 @@ class HomeViewModel: ObservableObject {
         
         return dictionary.object(forKey: key)
     }
+    
 }
-
