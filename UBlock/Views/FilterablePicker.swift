@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FilterablePicker<T> where T: RandomAccessCollection & Hashable & View {
+struct FilterablePicker<T: Pickable>: View {
     
     @State var filterList: Array<T>
     @State var filter: String = ""
@@ -18,7 +18,7 @@ struct FilterablePicker<T> where T: RandomAccessCollection & Hashable & View {
         VStack {
             TextField("", text: $filter)
             ForEach(filterList, id: \.self) { item in
-                
+                Text(item.name)
             }
             
         }

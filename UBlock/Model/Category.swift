@@ -7,7 +7,13 @@
 
 import Foundation
 
-struct Category {
-    var title: String
+struct Category: Pickable {
+    var id: Int
+    
+    var name: String
     var apps: [URL]?
+}
+
+protocol Pickable: Hashable, Identifiable, Named {
+    
 }

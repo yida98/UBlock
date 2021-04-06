@@ -19,7 +19,6 @@
 		E40D85A0261C10A9004476CE /* RulesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D859F261C10A9004476CE /* RulesViewModel.swift */; };
 		E40D85A3261C15DE004476CE /* RuleAddCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D85A2261C15DE004476CE /* RuleAddCellView.swift */; };
 		E40D85A6261C1FD9004476CE /* FilterablePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D85A5261C1FD9004476CE /* FilterablePicker.swift */; };
-		E40D85B1261C4BD3004476CE /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D85B0261C4BD3004476CE /* Picker.swift */; };
 		E4126CDA261531BA0085702F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4126CD9261531BA0085702F /* HomeViewModel.swift */; };
 		E42BDCA0258B279B0088DB09 /* UBlockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42BDC9F258B279B0088DB09 /* UBlockApp.swift */; };
 		E42BDCA2258B279B0088DB09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42BDCA1258B279B0088DB09 /* ContentView.swift */; };
@@ -47,7 +46,6 @@
 		E40D859F261C10A9004476CE /* RulesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewModel.swift; sourceTree = "<group>"; };
 		E40D85A2261C15DE004476CE /* RuleAddCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleAddCellView.swift; sourceTree = "<group>"; };
 		E40D85A5261C1FD9004476CE /* FilterablePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterablePicker.swift; sourceTree = "<group>"; };
-		E40D85B0261C4BD3004476CE /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
 		E4126CD9261531BA0085702F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E42BDC9C258B279B0088DB09 /* UBlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UBlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42BDC9F258B279B0088DB09 /* UBlockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBlockApp.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 				E40ADFDE2615080C00B59900 /* User.swift */,
 				E40D8591261BC6DC004476CE /* Rule.swift */,
 				E40D8594261BCFA6004476CE /* Category.swift */,
-				E40D85B0261C4BD3004476CE /* Picker.swift */,
 				E40D8597261BD3A0004476CE /* Time.swift */,
 			);
 			path = Model;
@@ -237,7 +234,6 @@
 			files = (
 				E40D858C261BC490004476CE /* RulesView.swift in Sources */,
 				E42BDCA2258B279B0088DB09 /* ContentView.swift in Sources */,
-				E40D85B1261C4BD3004476CE /* Picker.swift in Sources */,
 				E4126CDA261531BA0085702F /* HomeViewModel.swift in Sources */,
 				E47DFE262615905E0055D770 /* AlphabetizedList.swift in Sources */,
 				E40D8589261BBB77004476CE /* AppSelectionView.swift in Sources */,
