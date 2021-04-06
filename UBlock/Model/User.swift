@@ -7,8 +7,11 @@
 
 import Foundation
 
-protocol User {
-    var id: UUID { get }
-    var parent: User? { get }
+class User: ObservableObject {
+    var id: UUID = UUID()
         
+    @Published var categories: [Category] = [Category]()
+    
+
+
 }

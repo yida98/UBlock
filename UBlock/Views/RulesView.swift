@@ -23,7 +23,7 @@ struct RulesView: View {
             .padding()
             ScrollView {
                 ForEach(viewModel.rules) { rule in
-                    RuleCellView(rule: rule)
+                    RuleCellView().environmentObject(rule)
                         .padding()
                 }
             }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Rule: Identifiable {
+class Rule: Identifiable, ObservableObject {
     private var category: Category
     private var weekday: [DayOptions]
     private var start: Time

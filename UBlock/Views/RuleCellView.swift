@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RuleCellView: View {
     
-    var rule: Rule
+    @EnvironmentObject var rule: Rule
     
     var body: some View {
         VStack {
@@ -36,6 +36,6 @@ struct RuleCellView: View {
 
 struct RuleCellView_Previews: PreviewProvider {
     static var previews: some View {
-        RuleCellView(rule: Rule(category: Category(title: "Entertainment", apps: [URL]()), weekday: [.weekday], start: Time(hour: 0, min: 0, sec: 0), end: Time(hour: 3, min: 0, sec: 0)))
+        RuleCellView().environmentObject(Rule(category: Category(title: "Entertainment", apps: [URL]()), weekday: [.weekday], start: Time(hour: 0, min: 0, sec: 0), end: Time(hour: 3, min: 0, sec: 0)))
     }
 }

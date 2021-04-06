@@ -18,6 +18,8 @@
 		E40D859B261C09C2004476CE /* Color+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D859A261C09C2004476CE /* Color+ext.swift */; };
 		E40D85A0261C10A9004476CE /* RulesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D859F261C10A9004476CE /* RulesViewModel.swift */; };
 		E40D85A3261C15DE004476CE /* RuleAddCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D85A2261C15DE004476CE /* RuleAddCellView.swift */; };
+		E40D85A6261C1FD9004476CE /* FilterablePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D85A5261C1FD9004476CE /* FilterablePicker.swift */; };
+		E40D85B1261C4BD3004476CE /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D85B0261C4BD3004476CE /* Picker.swift */; };
 		E4126CDA261531BA0085702F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4126CD9261531BA0085702F /* HomeViewModel.swift */; };
 		E42BDCA0258B279B0088DB09 /* UBlockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42BDC9F258B279B0088DB09 /* UBlockApp.swift */; };
 		E42BDCA2258B279B0088DB09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42BDCA1258B279B0088DB09 /* ContentView.swift */; };
@@ -44,6 +46,8 @@
 		E40D859A261C09C2004476CE /* Color+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+ext.swift"; sourceTree = "<group>"; };
 		E40D859F261C10A9004476CE /* RulesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewModel.swift; sourceTree = "<group>"; };
 		E40D85A2261C15DE004476CE /* RuleAddCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleAddCellView.swift; sourceTree = "<group>"; };
+		E40D85A5261C1FD9004476CE /* FilterablePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterablePicker.swift; sourceTree = "<group>"; };
+		E40D85B0261C4BD3004476CE /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
 		E4126CD9261531BA0085702F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E42BDC9C258B279B0088DB09 /* UBlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UBlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42BDC9F258B279B0088DB09 /* UBlockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBlockApp.swift; sourceTree = "<group>"; };
@@ -72,12 +76,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E40D85AA261C32E1004476CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E42BDCA1258B279B0088DB09 /* ContentView.swift */,
+				E4126CD9261531BA0085702F /* HomeViewModel.swift */,
+				E40D8585261BBA37004476CE /* AppCellView.swift */,
+				E40D8588261BBB77004476CE /* AppSelectionView.swift */,
+				E40D858B261BC490004476CE /* RulesView.swift */,
+				E40D859F261C10A9004476CE /* RulesViewModel.swift */,
+				E40D858E261BC6C4004476CE /* RuleCellView.swift */,
+				E40D85A2261C15DE004476CE /* RuleAddCellView.swift */,
+				E40D85A5261C1FD9004476CE /* FilterablePicker.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E4126CD62615120E0085702F /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				E40ADFDE2615080C00B59900 /* User.swift */,
 				E40D8591261BC6DC004476CE /* Rule.swift */,
 				E40D8594261BCFA6004476CE /* Category.swift */,
+				E40D85B0261C4BD3004476CE /* Picker.swift */,
 				E40D8597261BD3A0004476CE /* Time.swift */,
 			);
 			path = Model;
@@ -125,14 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				E42BDC9F258B279B0088DB09 /* UBlockApp.swift */,
-				E42BDCA1258B279B0088DB09 /* ContentView.swift */,
-				E4126CD9261531BA0085702F /* HomeViewModel.swift */,
-				E40D8585261BBA37004476CE /* AppCellView.swift */,
-				E40D8588261BBB77004476CE /* AppSelectionView.swift */,
-				E40D858B261BC490004476CE /* RulesView.swift */,
-				E40D859F261C10A9004476CE /* RulesViewModel.swift */,
-				E40D858E261BC6C4004476CE /* RuleCellView.swift */,
-				E40D85A2261C15DE004476CE /* RuleAddCellView.swift */,
+				E40D85AA261C32E1004476CE /* Views */,
 				E42A27BC2616FA430019D941 /* Data Structures */,
 				E42A27BE2616FA8A0019D941 /* Helper */,
 				E4126CD62615120E0085702F /* Model */,
@@ -223,11 +237,13 @@
 			files = (
 				E40D858C261BC490004476CE /* RulesView.swift in Sources */,
 				E42BDCA2258B279B0088DB09 /* ContentView.swift in Sources */,
+				E40D85B1261C4BD3004476CE /* Picker.swift in Sources */,
 				E4126CDA261531BA0085702F /* HomeViewModel.swift in Sources */,
 				E47DFE262615905E0055D770 /* AlphabetizedList.swift in Sources */,
 				E40D8589261BBB77004476CE /* AppSelectionView.swift in Sources */,
 				E42BDCA0258B279B0088DB09 /* UBlockApp.swift in Sources */,
 				E40D85A0261C10A9004476CE /* RulesViewModel.swift in Sources */,
+				E40D85A6261C1FD9004476CE /* FilterablePicker.swift in Sources */,
 				E40D8598261BD3A0004476CE /* Time.swift in Sources */,
 				E40ADFDF2615080C00B59900 /* User.swift in Sources */,
 				E479BC4026169CA900292B18 /* Queue.swift in Sources */,
