@@ -8,10 +8,17 @@
 import Foundation
 
 struct Rule {
-    var category: Category
-    var weekday: [DayOptions]
-    var start: Time
-    var end: Time
+    private var category: Category
+    private var weekday: [DayOptions]
+    private var start: Time
+    private var end: Time
+    
+    init(category: Category, weekday: [DayOptions], start: Time, end: Time) {
+        self.category = category
+        self.weekday = weekday
+        self.start = start
+        self.end = end
+    }
     
 }
 
@@ -26,7 +33,7 @@ extension Rule {
         
         if days.count == 1 {
             if days[0] == DayOptions.strDict[.everyday] {
-                return days[0]
+                return days[0].lowercased()
             }
             return "\(result)\(days[0])"
         } else {

@@ -12,9 +12,9 @@ struct RulesView: View {
         VStack {
             HStack {
                 Text("Rules")
-                Button("+") {
-                    <#code#>
-                }
+//                Button("+") {
+//                    <#code#>
+//                }
             }
 //            ScrollView {
 //                ForEach() {
