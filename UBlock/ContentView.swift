@@ -12,13 +12,18 @@ struct ContentView: View {
     @EnvironmentObject var viewModel: HomeViewModel
     
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-        ScrollView {
-            ForEach(viewModel.apps, id: \.self) { app in
-                Image(nsImage: app.image ?? NSImage(contentsOf: Constants.sampleIconURL)!)
-                Text(app.name)
+        HStack {
+            VStack {
+                Text("Hello, world!")
+                    .padding()
+                ScrollView {
+                    ForEach(viewModel.apps, id: \.self) { app in
+                        Image(nsImage: app.image ?? NSImage(contentsOf: Constants.sampleIconURL)!)
+                        Text(app.name)
+                    }
+                }
             }
+            RulesView()
         }
     }
 }

@@ -10,6 +10,11 @@
 		E40ADFDF2615080C00B59900 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40ADFDE2615080C00B59900 /* User.swift */; };
 		E40D8586261BBA37004476CE /* AppCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D8585261BBA37004476CE /* AppCellView.swift */; };
 		E40D8589261BBB77004476CE /* AppSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D8588261BBB77004476CE /* AppSelectionView.swift */; };
+		E40D858C261BC490004476CE /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D858B261BC490004476CE /* RulesView.swift */; };
+		E40D858F261BC6C4004476CE /* RuleCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D858E261BC6C4004476CE /* RuleCellView.swift */; };
+		E40D8592261BC6DC004476CE /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D8591261BC6DC004476CE /* Rule.swift */; };
+		E40D8595261BCFA6004476CE /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D8594261BCFA6004476CE /* Category.swift */; };
+		E40D8598261BD3A0004476CE /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D8597261BD3A0004476CE /* Time.swift */; };
 		E4126CDA261531BA0085702F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4126CD9261531BA0085702F /* HomeViewModel.swift */; };
 		E42BDCA0258B279B0088DB09 /* UBlockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42BDC9F258B279B0088DB09 /* UBlockApp.swift */; };
 		E42BDCA2258B279B0088DB09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42BDCA1258B279B0088DB09 /* ContentView.swift */; };
@@ -28,6 +33,11 @@
 		E40ADFDE2615080C00B59900 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E40D8585261BBA37004476CE /* AppCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCellView.swift; sourceTree = "<group>"; };
 		E40D8588261BBB77004476CE /* AppSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSelectionView.swift; sourceTree = "<group>"; };
+		E40D858B261BC490004476CE /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
+		E40D858E261BC6C4004476CE /* RuleCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleCellView.swift; sourceTree = "<group>"; };
+		E40D8591261BC6DC004476CE /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
+		E40D8594261BCFA6004476CE /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		E40D8597261BD3A0004476CE /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		E4126CD9261531BA0085702F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E42BDC9C258B279B0088DB09 /* UBlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UBlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42BDC9F258B279B0088DB09 /* UBlockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBlockApp.swift; sourceTree = "<group>"; };
@@ -60,6 +70,9 @@
 			isa = PBXGroup;
 			children = (
 				E40ADFDE2615080C00B59900 /* User.swift */,
+				E40D8591261BC6DC004476CE /* Rule.swift */,
+				E40D8594261BCFA6004476CE /* Category.swift */,
+				E40D8597261BD3A0004476CE /* Time.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,6 +122,8 @@
 				E4126CD9261531BA0085702F /* HomeViewModel.swift */,
 				E40D8585261BBA37004476CE /* AppCellView.swift */,
 				E40D8588261BBB77004476CE /* AppSelectionView.swift */,
+				E40D858B261BC490004476CE /* RulesView.swift */,
+				E40D858E261BC6C4004476CE /* RuleCellView.swift */,
 				E42A27BC2616FA430019D941 /* Data Structures */,
 				E42A27BE2616FA8A0019D941 /* Helper */,
 				E4126CD62615120E0085702F /* Model */,
@@ -197,18 +212,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E40D858C261BC490004476CE /* RulesView.swift in Sources */,
 				E42BDCA2258B279B0088DB09 /* ContentView.swift in Sources */,
 				E4126CDA261531BA0085702F /* HomeViewModel.swift in Sources */,
 				E47DFE262615905E0055D770 /* AlphabetizedList.swift in Sources */,
 				E40D8589261BBB77004476CE /* AppSelectionView.swift in Sources */,
 				E42BDCA0258B279B0088DB09 /* UBlockApp.swift in Sources */,
+				E40D8598261BD3A0004476CE /* Time.swift in Sources */,
 				E40ADFDF2615080C00B59900 /* User.swift in Sources */,
 				E479BC4026169CA900292B18 /* Queue.swift in Sources */,
 				E47DFE2C261595690055D770 /* Named+Indexed.swift in Sources */,
 				E47DFE292615910E0055D770 /* AppFile.swift in Sources */,
 				E40D8586261BBA37004476CE /* AppCellView.swift in Sources */,
+				E40D8595261BCFA6004476CE /* Category.swift in Sources */,
 				E479BC3C26167CC500292B18 /* URL+ext.swift in Sources */,
 				E47DFE302615AC070055D770 /* Constants.swift in Sources */,
+				E40D8592261BC6DC004476CE /* Rule.swift in Sources */,
+				E40D858F261BC6C4004476CE /* RuleCellView.swift in Sources */,
 				E479BC432616C64B00292B18 /* FileManager+ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

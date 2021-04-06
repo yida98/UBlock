@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct RuleCellView: View {
+    
+    var rule: Rule
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -15,6 +18,6 @@ struct RuleCellView: View {
 
 struct RuleCellView_Previews: PreviewProvider {
     static var previews: some View {
-        RuleCellView()
+        RuleCellView(rule: Rule(category: Category(title: "Entertainment", apps: [URL]()), duration: [.Friday], start: Time(hour: 0, min: 0, sec: 0), end: Time(hour: 3, min: 0, sec: 0)))
     }
 }
