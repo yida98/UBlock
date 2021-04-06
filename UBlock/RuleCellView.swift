@@ -17,15 +17,19 @@ struct RuleCellView: View {
                 Spacer()
                 Text("edit")
                     .font(.caption)
-            }.padding(.all, 5)
+                    .foregroundColor(.lightGrey)
+            }.padding(.horizontal, 5)
+            .padding(.top, 2)
             HStack {
                 Text(rule.description())
-                    .padding()
+                    .padding(.bottom, 10)
+                    .padding(.horizontal, 20)
+                    .foregroundColor(.green)
                 Spacer()
             }
         }
-        .frame(width: 300)
-        .background(Color.gray)
+        .frame(minWidth: 300, idealWidth: 500)
+        .background(Color.lightGrey3)
         .cornerRadius(5)
     }
 }

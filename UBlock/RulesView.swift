@@ -8,25 +8,31 @@
 import SwiftUI
 
 struct RulesView: View {
+    
+    @EnvironmentObject var viewModel: RulesViewModel
     var body: some View {
         VStack {
             HStack {
                 Text("Rules")
+                    .font(.title)
+                Spacer()
 //                Button("+") {
 //                    <#code#>
 //                }
             }
-//            ScrollView {
-//                ForEach() {
-//                    
-//                }
-//            }
+            .padding()
+            ScrollView {
+                ForEach(viewModel.rules) { rule in
+                    RuleCellView(rule: rule)
+                        .padding()
+                }
+            }
         }
     }
 }
 
 struct RulesView_Previews: PreviewProvider {
     static var previews: some View {
-        RulesView()
+        RulesView().environmentObject(RulesViewModel(rules: [Rule(category: Category(title: "Entertainment", apps: [URL]()), weekday: [.weekday], start: Time(hour: 0, min: 0, sec: 0), end: Time(hour: 3, min: 0, sec: 0))]))
     }
 }

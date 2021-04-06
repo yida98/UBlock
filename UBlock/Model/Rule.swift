@@ -7,17 +7,19 @@
 
 import Foundation
 
-struct Rule {
+struct Rule: Identifiable {
     private var category: Category
     private var weekday: [DayOptions]
     private var start: Time
     private var end: Time
+    var id: UUID
     
     init(category: Category, weekday: [DayOptions], start: Time, end: Time) {
         self.category = category
         self.weekday = weekday
         self.start = start
         self.end = end
+        self.id = UUID()
     }
     
 }
