@@ -16,9 +16,24 @@ struct FilterablePicker<T: Pickable>: View {
     
     var body: some View {
         VStack {
-            TextField("", text: $filter)
-            ForEach(filterList, id: \.self) { item in
-                Text(item.name)
+            ZStack(alignment: .topLeading) {
+                VStack {
+                    Text("")
+                        .padding(.bottom, 2)
+                    ScrollView {
+                        ForEach(filterList, id: \.self) { item in
+                            HStack {
+                                Text(item.name)
+                            }
+                        }
+                    }.frame(maxWidth: .infinity,minHeight: 0, idealHeight: 0, maxHeight: 80, alignment: .leading)
+                    .padding(.horizontal, 14)
+                    .padding(.top, 4)
+                    .background(Color.white)
+                    .cornerRadius(8)
+                }
+                TextField("", text: $filter)    
+                
             }
             
         }

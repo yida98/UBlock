@@ -10,7 +10,7 @@ import SwiftUI
 struct RuleAddCellView: View {
     @EnvironmentObject var user: User
     var body: some View {
-        HStack {
+        HStack (alignment: .top){
             Text("No")
             FilterablePicker(filterList: user.categories)
         }
@@ -20,6 +20,11 @@ struct RuleAddCellView: View {
 
 struct RuleAddCellView_Previews: PreviewProvider {
     static var previews: some View {
-        RuleAddCellView().environmentObject(User())
+        let user = User()
+        let cat1 = Category(name: "Entertainment", apps: [URL]())
+        let cat2 = Category(name: "Productivity", apps: [URL]())
+        user.categories.append(cat1)
+        user.categories.append(cat2)
+        return RuleAddCellView().environmentObject(user)
     }
 }

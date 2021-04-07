@@ -33,6 +33,6 @@ struct RulesView: View {
 
 struct RulesView_Previews: PreviewProvider {
     static var previews: some View {
-        RulesView().environmentObject(RulesViewModel(rules: [Rule(category: Category(id: 0, name: "Entertainment", apps: [URL]()), weekday: [.weekday], start: Time(hour: 0, min: 0, sec: 0), end: Time(hour: 3, min: 0, sec: 0))]))
+        RulesView().environmentObject(RulesViewModel(rules: [Rule(category: Category(name: "Entertainment", apps: [URL]()), weekday: [.weekday], start: Time(hour: 0, min: 0, sec: 0), end: Time(hour: 3, min: 0, sec: 0))]))
     }
 }

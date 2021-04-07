@@ -8,7 +8,7 @@
 import Foundation
 
 struct Category: Pickable {
-    var id: Int
+    var id: String { name }
     
     var name: String
     var apps: [URL]?
