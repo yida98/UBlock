@@ -36,6 +36,6 @@ struct RuleCellView: View {
 
 struct RuleCellView_Previews: PreviewProvider {
     static var previews: some View {
-        RuleCellView().environmentObject(Rule(category: Category(name: "Entertainment", apps: [URL]()), weekday: [.weekday], start: Time(hour: 0, min: 0, sec: 0), end: Time(hour: 3, min: 0, sec: 0)))
+        RuleCellView().environmentObject(Rule(category: AppCategory(name: "Entertainment", apps: [URL]()), weekday: [.weekday], start: Time(hour: 0, min: 0, sec: 0), end: Time(hour: 3, min: 0, sec: 0)))
     }
 }

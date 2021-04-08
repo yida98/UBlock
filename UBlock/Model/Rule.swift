@@ -8,13 +8,13 @@
 import Foundation
 
 class Rule: Identifiable, ObservableObject {
-    private var category: Category
+    private var category: AppCategory
     private var weekday: [DayOptions]
     private var start: Time
     private var end: Time
     var id: UUID
     
-    init(category: Category, weekday: [DayOptions], start: Time, end: Time) {
+    init(category: AppCategory, weekday: [DayOptions], start: Time, end: Time) {
         self.category = category
         self.weekday = weekday
         self.start = start

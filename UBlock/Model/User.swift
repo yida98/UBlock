@@ -10,7 +10,7 @@ import Foundation
 class User: ObservableObject {
     var id: UUID = UUID()
         
-    @Published var categories: [Category] = [Category]()
+    @Published var categories: [AppCategory] = [AppCategory]()
     
 
 

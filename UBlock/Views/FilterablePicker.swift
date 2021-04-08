@@ -9,11 +9,14 @@ import SwiftUI
 
 struct FilterablePicker<T: Pickable>: View {
     
-    @State var filterList: Array<T>
+    @EnvironmentObject var viewModel: FilterablePickerViewModel<T>
+    
+//    @State var filterList: Array<T>
     @State var filter: String = ""
     
     @State var categorySelection: Int = 0
-    
+    @State var myColor: Color = Color.red
+        
     var body: some View {
         VStack {
             ZStack(alignment: .topLeading) {
@@ -21,13 +24,11 @@ struct FilterablePicker<T: Pickable>: View {
                     Text("")
                         .padding(.bottom, 2)
                     ScrollView {
-                        ForEach(filterList, id: \.self) { item in
-                            HStack {
-                                Text(item.name)
-                            }
+                        ForEach(viewModel.filterList, id: \.self) { item in
+                            PickerItemView<T>(item: item)
+
                         }
-                    }.frame(maxWidth: .infinity,minHeight: 0, idealHeight: 0, maxHeight: 80, alignment: .leading)
-                    .padding(.horizontal, 14)
+                    }.frame(maxWidth: .infinity,minHeight: 0, idealHeight: 0, maxHeight: 80)
                     .padding(.top, 4)
                     .background(Color.white)
                     .cornerRadius(8)
