@@ -10,17 +10,22 @@ import SwiftUI
 struct RulesView: View {
     
     @EnvironmentObject var viewModel: RulesViewModel
+    @State var adding: Bool = false
+    
     var body: some View {
         VStack {
             HStack {
                 Text("Rules")
                     .font(.title)
                 Spacer()
-//                Button("+") {
-//                    <#code#>
-//                }
+                Button("+") {
+                    adding = true
+                }
             }
             .padding()
+            if adding {
+                RuleAddCellView()
+            }
             ScrollView {
                 ForEach(viewModel.rules) { rule in
                     RuleCellView().environmentObject(rule)

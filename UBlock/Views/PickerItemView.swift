@@ -27,6 +27,6 @@ struct PickerItemView<T: Pickable>: View {
 
 struct PickerItemView_Previews: PreviewProvider {
     static var previews: some View {
-        PickerItemView(item: Category(name: "Entertainment"))
+        PickerItemView(item: AppCategory(name: "Entertainment"))
     }
 }

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E40ADFDF2615080C00B59900 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40ADFDE2615080C00B59900 /* User.swift */; };
 		E40D8586261BBA37004476CE /* AppCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D8585261BBA37004476CE /* AppCellView.swift */; };
 		E40D8589261BBB77004476CE /* AppSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D8588261BBB77004476CE /* AppSelectionView.swift */; };
 		E40D858C261BC490004476CE /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D858B261BC490004476CE /* RulesView.swift */; };
@@ -33,10 +32,10 @@
 		E47DFE292615910E0055D770 /* AppFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DFE282615910E0055D770 /* AppFile.swift */; };
 		E47DFE2C261595690055D770 /* Named+Indexed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DFE2B261595690055D770 /* Named+Indexed.swift */; };
 		E47DFE302615AC070055D770 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DFE2F2615AC070055D770 /* Constants.swift */; };
+		E4AC5A46261EDB05006A2789 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC5A45261EDB05006A2789 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E40ADFDE2615080C00B59900 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E40D8585261BBA37004476CE /* AppCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCellView.swift; sourceTree = "<group>"; };
 		E40D8588261BBB77004476CE /* AppSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSelectionView.swift; sourceTree = "<group>"; };
 		E40D858B261BC490004476CE /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		E47DFE282615910E0055D770 /* AppFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFile.swift; sourceTree = "<group>"; };
 		E47DFE2B261595690055D770 /* Named+Indexed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Named+Indexed.swift"; sourceTree = "<group>"; };
 		E47DFE2F2615AC070055D770 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E4AC5A45261EDB05006A2789 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +99,9 @@
 		E4126CD62615120E0085702F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E40ADFDE2615080C00B59900 /* User.swift */,
 				E40D8591261BC6DC004476CE /* Rule.swift */,
 				E40D8594261BCFA6004476CE /* Category.swift */,
+				E4AC5A45261EDB05006A2789 /* User.swift */,
 				E40D8597261BD3A0004476CE /* Time.swift */,
 			);
 			path = Model;
@@ -249,7 +249,6 @@
 				E40D85A0261C10A9004476CE /* RulesViewModel.swift in Sources */,
 				E40D85A6261C1FD9004476CE /* FilterablePicker.swift in Sources */,
 				E40D8598261BD3A0004476CE /* Time.swift in Sources */,
-				E40ADFDF2615080C00B59900 /* User.swift in Sources */,
 				E479BC4026169CA900292B18 /* Queue.swift in Sources */,
 				E47DFE2C261595690055D770 /* Named+Indexed.swift in Sources */,
 				E47DFE292615910E0055D770 /* AppFile.swift in Sources */,
@@ -259,6 +258,7 @@
 				E40D859B261C09C2004476CE /* Color+ext.swift in Sources */,
 				E47DFE302615AC070055D770 /* Constants.swift in Sources */,
 				E40D8592261BC6DC004476CE /* Rule.swift in Sources */,
+				E4AC5A46261EDB05006A2789 /* User.swift in Sources */,
 				E40D858F261BC6C4004476CE /* RuleCellView.swift in Sources */,
 				E40D85A3261C15DE004476CE /* RuleAddCellView.swift in Sources */,
 				E479BC432616C64B00292B18 /* FileManager+ext.swift in Sources */,

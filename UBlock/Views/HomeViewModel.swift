@@ -13,15 +13,30 @@ import QuickLookThumbnailing
 class HomeViewModel: ObservableObject {
     
     var apps: AlphabetizedList<AppFile>
-    let query = NSMetadataQuery()
+    private let query = NSMetadataQuery()
+    
+//    var user: User
     
     private let fileManager = FileManager.default
     
     init() {
         self.apps = AlphabetizedList<AppFile>()
         findApps()
+        
     }
         
+    
+}
+
+// MARK: Retrieve User Information
+
+extension HomeViewModel {
+    
+}
+
+// MARK: Retrieve Apps
+extension HomeViewModel {
+    
     private func findApps() {
         
         let applicationsURLs = fileManager.urls(for: .allApplicationsDirectory, in: .allDomainsMask)
@@ -49,10 +64,6 @@ class HomeViewModel: ObservableObject {
         
         
     }
-}
-
-// MARK: Retrieve Apps
-extension HomeViewModel {
     
     private func getAppIcon(url: URL) -> NSImage {
         if let infoPlistURL = findInfoPlist(appURL: url) {

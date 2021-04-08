@@ -12,8 +12,7 @@ struct FilterablePicker<T: Pickable>: View {
     @EnvironmentObject var viewModel: FilterablePickerViewModel<T>
     
 //    @State var filterList: Array<T>
-    @State var filter: String = ""
-    
+    @State var selection: String = ""
     @State var categorySelection: Int = 0
     @State var myColor: Color = Color.red
         
@@ -21,21 +20,22 @@ struct FilterablePicker<T: Pickable>: View {
         VStack {
             ZStack(alignment: .topLeading) {
                 VStack {
-                    Text("")
+                    Text(selection)
                         .padding(.bottom, 2)
                     ScrollView {
                         ForEach(viewModel.filterList, id: \.self) { item in
                             PickerItemView<T>(item: item)
-
+                                .onTapGesture {
+                                    debugPrint("tapped \(item.name)")
+                                }
                         }
                     }.frame(maxWidth: .infinity,minHeight: 0, idealHeight: 0, maxHeight: 80)
                     .padding(.top, 4)
                     .background(Color.white)
                     .cornerRadius(8)
                 }
-                TextField("", text: $filter)    
                 
-            }
+            }.frame(width: 180)
             
         }
     }

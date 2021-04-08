@@ -12,7 +12,7 @@ struct RuleAddCellView: View {
     var body: some View {
         HStack (alignment: .top){
             Text("No")
-            FilterablePicker<AppCategory>().environmentObject(FilterablePickerViewModel<AppCategory>(list: user.categories))
+            FilterablePicker<AppCategory>().environmentObject(FilterablePickerViewModel<AppCategory>(list: user.appCategories))
         }
         
     }
@@ -23,8 +23,8 @@ struct RuleAddCellView_Previews: PreviewProvider {
         let user = User()
         let cat1 = AppCategory(name: "Entertainment", apps: [URL]())
         let cat2 = AppCategory(name: "Productivity", apps: [URL]())
-        user.categories.append(cat1)
-        user.categories.append(cat2)
+        user.appCategories.append(cat1)
+        user.appCategories.append(cat2)
         return RuleAddCellView().environmentObject(user)
     }
 }
