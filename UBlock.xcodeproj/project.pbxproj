@@ -33,6 +33,7 @@
 		E47DFE2C261595690055D770 /* Named+Indexed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DFE2B261595690055D770 /* Named+Indexed.swift */; };
 		E47DFE302615AC070055D770 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DFE2F2615AC070055D770 /* Constants.swift */; };
 		E4AC5A46261EDB05006A2789 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC5A45261EDB05006A2789 /* User.swift */; };
+		E4AC5A49261FB659006A2789 /* FilterPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC5A48261FB659006A2789 /* FilterPopupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		E47DFE2B261595690055D770 /* Named+Indexed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Named+Indexed.swift"; sourceTree = "<group>"; };
 		E47DFE2F2615AC070055D770 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E4AC5A45261EDB05006A2789 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E4AC5A48261FB659006A2789 /* FilterPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPopupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				E40D858E261BC6C4004476CE /* RuleCellView.swift */,
 				E40D85A2261C15DE004476CE /* RuleAddCellView.swift */,
 				E40D85A5261C1FD9004476CE /* FilterablePicker.swift */,
+				E4AC5A48261FB659006A2789 /* FilterPopupView.swift */,
 				E40D85B7261E9EF5004476CE /* PickerItemView.swift */,
 				E40D85B4261E831C004476CE /* FilterablePickerViewModel.swift */,
 			);
@@ -247,6 +250,7 @@
 				E42BDCA0258B279B0088DB09 /* UBlockApp.swift in Sources */,
 				E40D85B8261E9EF5004476CE /* PickerItemView.swift in Sources */,
 				E40D85A0261C10A9004476CE /* RulesViewModel.swift in Sources */,
+				E4AC5A49261FB659006A2789 /* FilterPopupView.swift in Sources */,
 				E40D85A6261C1FD9004476CE /* FilterablePicker.swift in Sources */,
 				E40D8598261BD3A0004476CE /* Time.swift in Sources */,
 				E479BC4026169CA900292B18 /* Queue.swift in Sources */,

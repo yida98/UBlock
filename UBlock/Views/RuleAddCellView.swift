@@ -10,9 +10,15 @@ import SwiftUI
 struct RuleAddCellView: View {
     @EnvironmentObject var user: User
     var body: some View {
-        HStack (alignment: .top){
-            Text("No")
-            FilterablePicker<AppCategory>().environmentObject(FilterablePickerViewModel<AppCategory>(list: user.appCategories))
+        VStack(alignment: .leading) {
+            HStack (alignment: .top){
+                Text("No")
+                FilterablePicker<AppCategory>().environmentObject(FilterablePickerViewModel<AppCategory>(list: user.appCategories))
+                
+            }.zIndex(1)
+            
+            Text("Oh geez, I sure hope I'm beneath everyone else!")
+            Spacer()
         }
         
     }
@@ -23,8 +29,10 @@ struct RuleAddCellView_Previews: PreviewProvider {
         let user = User()
         let cat1 = AppCategory(name: "Entertainment", apps: [URL]())
         let cat2 = AppCategory(name: "Productivity", apps: [URL]())
+        let cat3 = AppCategory(name: "Miscellaneous", apps: [URL]())
         user.appCategories.append(cat1)
         user.appCategories.append(cat2)
+        user.appCategories.append(cat3)
         return RuleAddCellView().environmentObject(user)
     }
 }
