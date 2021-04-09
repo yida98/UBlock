@@ -1,5 +1,5 @@
 //
-//  FilterablePicker.swift
+//  DropDownPicker.swift
 //  UBlock
 //
 //  Created by Yida Zhang on 2021-04-05.
@@ -7,14 +7,12 @@
 
 import SwiftUI
 
-struct FilterablePicker<T: Pickable>: View {
+struct DropDownPicker<T: Pickable>: View {
     
-    @EnvironmentObject var viewModel: FilterablePickerViewModel<T>
+//    @EnvironmentObject var viewModel: DropDownViewModel<T>
     
-//    @State var filterList: Array<T>
+    var list: Array<T>
     @State var selection: String = "None"
-    @State var categorySelection: Int = 0
-    @State var myColor: Color = Color.red
     
     @State var overlaying: Bool = false
         
@@ -25,9 +23,9 @@ struct FilterablePicker<T: Pickable>: View {
             .onTapGesture {
                 overlaying.toggle()
             }
-            .modifier(FilterPopupView(isPresented: $overlaying, content: {
+            .modifier(DropDownList(isPresented: $overlaying, content: {
                 ScrollView {
-                    ForEach(viewModel.filterList, id: \.self) { item in
+                    ForEach(list, id: \.self) { item in
                         PickerItemView<T>(item: item)
                             .onTapGesture {
                                 selection = item.name

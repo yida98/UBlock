@@ -27,7 +27,6 @@ class User: ObservableObject, Codable {
     }
     
     init() {
-        
     }
     
     private enum CodingKeys: String, CodingKey {

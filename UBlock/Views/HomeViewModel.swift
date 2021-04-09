@@ -15,12 +15,13 @@ class HomeViewModel: ObservableObject {
     var apps: AlphabetizedList<AppFile>
     private let query = NSMetadataQuery()
     
-//    var user: User
+    var user: User
     
     private let fileManager = FileManager.default
     
     init() {
         self.apps = AlphabetizedList<AppFile>()
+        self.user = User()
         findApps()
         
     }

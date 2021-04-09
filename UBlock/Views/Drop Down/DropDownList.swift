@@ -1,5 +1,5 @@
 //
-//  FilterPopupView.swift
+//  DropDownList.swift
 //  UBlock
 //
 //  Created by Yida Zhang on 2021-04-08.
@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
     
-struct DropdownList<T: View>: ViewModifier {
+struct DropDownList<T: View>: ViewModifier {
     let popup: T
     var isPresented: Binding<Bool>
 

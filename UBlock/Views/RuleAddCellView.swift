@@ -13,14 +13,12 @@ struct RuleAddCellView: View {
         VStack(alignment: .leading) {
             HStack (alignment: .top){
                 Text("No")
-                FilterablePicker<AppCategory>().environmentObject(FilterablePickerViewModel<AppCategory>(list: user.appCategories))
-                
+                DropDownPicker<AppCategory>(list: user.appCategories)
             }.zIndex(1)
-            
-            Text("Oh geez, I sure hope I'm beneath everyone else!")
-            Spacer()
+            Button("Done") {
+                
+            }
         }
-        
     }
 }
 
