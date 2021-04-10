@@ -26,7 +26,7 @@ class Rule: Identifiable, ObservableObject {
 
 extension Rule {
     func description() -> String {
-        return "No \(category.name) \(weekdayString())"
+        return "No \(category.name) \(weekdayString()) from \(start.description()) to \(end.description())"
     }
     
     private func weekdayString() -> String {

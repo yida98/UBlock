@@ -11,4 +11,8 @@ struct Time {
     var hour: Int
     var min: Int
     var sec: Int = 0
+    
+    func description() -> String {
+        return "\(hour):\(min)"
+    }
 }

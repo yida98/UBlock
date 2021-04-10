@@ -10,9 +10,11 @@ import Foundation
 class RulesViewModel: ObservableObject {
     
     @Published var rules: [Rule]
+    @Published var appCategories: [AppCategory]
     
     init(rules: [Rule]) {
         self.rules = rules
+        self.appCategories = UserDefaults.appCategories
     }
     
 }

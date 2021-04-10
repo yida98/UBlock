@@ -24,7 +24,7 @@ struct RulesView: View {
             }
             .padding()
             if adding {
-                RuleAddCellView().environmentObject(User())
+                RuleAddCellView().environmentObject(viewModel)
             }
             ScrollView {
                 ForEach(viewModel.rules) { rule in
