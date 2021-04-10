@@ -12,7 +12,7 @@ struct DropDownPicker<T: Pickable>: View {
 //    @EnvironmentObject var viewModel: DropDownViewModel<T>
     
     var list: Array<T>
-    @State var selection: String = "None"
+    @State var selection: String = " "
     
     @State var overlaying: Bool = false
         

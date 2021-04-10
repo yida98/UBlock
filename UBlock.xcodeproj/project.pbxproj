@@ -20,6 +20,8 @@
 		E40D85A6261C1FD9004476CE /* DropDownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D85A5261C1FD9004476CE /* DropDownPicker.swift */; };
 		E40D85B8261E9EF5004476CE /* PickerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D85B7261E9EF5004476CE /* PickerItemView.swift */; };
 		E4126CDA261531BA0085702F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4126CD9261531BA0085702F /* HomeViewModel.swift */; };
+		E41F38462621869100347924 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F38452621869100347924 /* UserSettings.swift */; };
+		E41F38492621938000347924 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F38482621938000347924 /* CategoryView.swift */; };
 		E42BDCA0258B279B0088DB09 /* UBlockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42BDC9F258B279B0088DB09 /* UBlockApp.swift */; };
 		E42BDCA2258B279B0088DB09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42BDCA1258B279B0088DB09 /* ContentView.swift */; };
 		E42BDCA4258B279C0088DB09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42BDCA3258B279C0088DB09 /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		E40D85A5261C1FD9004476CE /* DropDownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownPicker.swift; sourceTree = "<group>"; };
 		E40D85B7261E9EF5004476CE /* PickerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerItemView.swift; sourceTree = "<group>"; };
 		E4126CD9261531BA0085702F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E41F38452621869100347924 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		E41F38482621938000347924 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		E42BDC9C258B279B0088DB09 /* UBlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UBlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42BDC9F258B279B0088DB09 /* UBlockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBlockApp.swift; sourceTree = "<group>"; };
 		E42BDCA1258B279B0088DB09 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 				E4126CD9261531BA0085702F /* HomeViewModel.swift */,
 				E40D8585261BBA37004476CE /* AppCellView.swift */,
 				E40D8588261BBB77004476CE /* AppSelectionView.swift */,
+				E41F38482621938000347924 /* CategoryView.swift */,
 				E41F3840262169CB00347924 /* Rules View */,
 				E4AC5A53262012BE006A2789 /* Drop Down */,
 			);
@@ -99,6 +104,7 @@
 				E40D8591261BC6DC004476CE /* Rule.swift */,
 				E40D8594261BCFA6004476CE /* AppCategory.swift */,
 				E4AC5A45261EDB05006A2789 /* UserDefault.swift */,
+				E41F38452621869100347924 /* UserSettings.swift */,
 				E40D8597261BD3A0004476CE /* Time.swift */,
 			);
 			path = Model;
@@ -274,6 +280,7 @@
 				E47DFE292615910E0055D770 /* AppFile.swift in Sources */,
 				E40D8586261BBA37004476CE /* AppCellView.swift in Sources */,
 				E40D8595261BCFA6004476CE /* AppCategory.swift in Sources */,
+				E41F38462621869100347924 /* UserSettings.swift in Sources */,
 				E479BC3C26167CC500292B18 /* URL+ext.swift in Sources */,
 				E40D859B261C09C2004476CE /* Color+ext.swift in Sources */,
 				E47DFE302615AC070055D770 /* Constants.swift in Sources */,
@@ -282,6 +289,7 @@
 				E40D858F261BC6C4004476CE /* RuleCellView.swift in Sources */,
 				E40D85A3261C15DE004476CE /* RuleAddCellView.swift in Sources */,
 				E479BC432616C64B00292B18 /* FileManager+ext.swift in Sources */,
+				E41F38492621938000347924 /* CategoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

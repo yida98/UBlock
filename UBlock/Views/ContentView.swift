@@ -13,13 +13,14 @@ struct ContentView: View {
     
     var body: some View {
         HStack {
-            VStack {
-                Text("Hello, world!")
-                    .padding()
-                ScrollView {
-                    ForEach(viewModel.apps, id: \.self) { app in
-                        Image(nsImage: app.image ?? NSImage(contentsOf: Constants.sampleIconURL)!)
-                        Text(app.name)
+            NavigationView {
+                VStack {
+                    CategoryView()
+                    ScrollView {
+                        ForEach(viewModel.apps, id: \.self) { app in
+                            Image(nsImage: app.image ?? NSImage(contentsOf: Constants.sampleIconURL)!)
+                            Text(app.name)
+                        }
                     }
                 }
             }
