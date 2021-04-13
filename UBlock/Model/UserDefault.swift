@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AppKit
 
 @propertyWrapper
 struct UserDefault<Value> {
@@ -24,6 +25,7 @@ struct UserDefault<Value> {
     enum Keys: String {
         case appCategories
         case rules
+        case apps
     }
 }
 
@@ -34,4 +36,7 @@ extension UserDefaults {
     
     @UserDefault(key: .rules, defaultValue: [Rule]())
     static var rules: [Rule]
+    
+    @UserDefault(key: .apps, defaultValue: AlphabetizedList<AppFile>())
+    static var apps: AlphabetizedList<AppFile>
 }

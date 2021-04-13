@@ -10,6 +10,7 @@ import SwiftUI
 struct CategoryView: View {
     
     @State var adding: Bool = false
+    @State var addingField: String = ""
     
     var body: some View {
         VStack {
@@ -21,8 +22,7 @@ struct CategoryView: View {
                 }
             }
             if adding {
-                Text("I'M IN A SCENE")
-                
+                TextField("Category Name", text: $addingField)
             }
             ForEach(UserDefaults.appCategories, id: \.self) { category in
                 Text(category.name)

@@ -20,7 +20,6 @@
 		E40D85A6261C1FD9004476CE /* DropDownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D85A5261C1FD9004476CE /* DropDownPicker.swift */; };
 		E40D85B8261E9EF5004476CE /* PickerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D85B7261E9EF5004476CE /* PickerItemView.swift */; };
 		E4126CDA261531BA0085702F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4126CD9261531BA0085702F /* HomeViewModel.swift */; };
-		E41F38462621869100347924 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F38452621869100347924 /* UserSettings.swift */; };
 		E41F38492621938000347924 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F38482621938000347924 /* CategoryView.swift */; };
 		E42BDCA0258B279B0088DB09 /* UBlockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42BDC9F258B279B0088DB09 /* UBlockApp.swift */; };
 		E42BDCA2258B279B0088DB09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42BDCA1258B279B0088DB09 /* ContentView.swift */; };
@@ -36,6 +35,8 @@
 		E4AC5A46261EDB05006A2789 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC5A45261EDB05006A2789 /* UserDefault.swift */; };
 		E4AC5A49261FB659006A2789 /* DropDownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC5A48261FB659006A2789 /* DropDownList.swift */; };
 		E4AC5A5026200DF1006A2789 /* DropDownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC5A4F26200DF1006A2789 /* DropDownViewModel.swift */; };
+		E4F0A9E82624E8C400EABE6A /* AddCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0A9E72624E8C400EABE6A /* AddCategoryView.swift */; };
+		E4F0A9EB2624EB1F00EABE6A /* AppFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0A9EA2624EB1F00EABE6A /* AppFinder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +53,6 @@
 		E40D85A5261C1FD9004476CE /* DropDownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownPicker.swift; sourceTree = "<group>"; };
 		E40D85B7261E9EF5004476CE /* PickerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerItemView.swift; sourceTree = "<group>"; };
 		E4126CD9261531BA0085702F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		E41F38452621869100347924 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		E41F38482621938000347924 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		E42BDC9C258B279B0088DB09 /* UBlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UBlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42BDC9F258B279B0088DB09 /* UBlockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBlockApp.swift; sourceTree = "<group>"; };
@@ -71,6 +71,8 @@
 		E4AC5A45261EDB05006A2789 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		E4AC5A48261FB659006A2789 /* DropDownList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownList.swift; sourceTree = "<group>"; };
 		E4AC5A4F26200DF1006A2789 /* DropDownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownViewModel.swift; sourceTree = "<group>"; };
+		E4F0A9E72624E8C400EABE6A /* AddCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryView.swift; sourceTree = "<group>"; };
+		E4F0A9EA2624EB1F00EABE6A /* AppFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFinder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				E40D8585261BBA37004476CE /* AppCellView.swift */,
 				E40D8588261BBB77004476CE /* AppSelectionView.swift */,
 				E41F38482621938000347924 /* CategoryView.swift */,
+				E4F0A9E72624E8C400EABE6A /* AddCategoryView.swift */,
 				E41F3840262169CB00347924 /* Rules View */,
 				E4AC5A53262012BE006A2789 /* Drop Down */,
 			);
@@ -104,7 +107,6 @@
 				E40D8591261BC6DC004476CE /* Rule.swift */,
 				E40D8594261BCFA6004476CE /* AppCategory.swift */,
 				E4AC5A45261EDB05006A2789 /* UserDefault.swift */,
-				E41F38452621869100347924 /* UserSettings.swift */,
 				E40D8597261BD3A0004476CE /* Time.swift */,
 			);
 			path = Model;
@@ -138,6 +140,7 @@
 				E479BC422616C64B00292B18 /* FileManager+ext.swift */,
 				E479BC3B26167CC500292B18 /* URL+ext.swift */,
 				E40D859A261C09C2004476CE /* Color+ext.swift */,
+				E4F0A9EA2624EB1F00EABE6A /* AppFinder.swift */,
 				E47DFE2F2615AC070055D770 /* Constants.swift */,
 			);
 			path = Helper;
@@ -265,6 +268,7 @@
 			files = (
 				E40D858C261BC490004476CE /* RulesView.swift in Sources */,
 				E42BDCA2258B279B0088DB09 /* ContentView.swift in Sources */,
+				E4F0A9EB2624EB1F00EABE6A /* AppFinder.swift in Sources */,
 				E4126CDA261531BA0085702F /* HomeViewModel.swift in Sources */,
 				E47DFE262615905E0055D770 /* AlphabetizedList.swift in Sources */,
 				E40D8589261BBB77004476CE /* AppSelectionView.swift in Sources */,
@@ -277,10 +281,10 @@
 				E479BC4026169CA900292B18 /* Queue.swift in Sources */,
 				E47DFE2C261595690055D770 /* Named+Indexed.swift in Sources */,
 				E4AC5A5026200DF1006A2789 /* DropDownViewModel.swift in Sources */,
+				E4F0A9E82624E8C400EABE6A /* AddCategoryView.swift in Sources */,
 				E47DFE292615910E0055D770 /* AppFile.swift in Sources */,
 				E40D8586261BBA37004476CE /* AppCellView.swift in Sources */,
 				E40D8595261BCFA6004476CE /* AppCategory.swift in Sources */,
-				E41F38462621869100347924 /* UserSettings.swift in Sources */,
 				E479BC3C26167CC500292B18 /* URL+ext.swift in Sources */,
 				E40D859B261C09C2004476CE /* Color+ext.swift in Sources */,
 				E47DFE302615AC070055D770 /* Constants.swift in Sources */,
