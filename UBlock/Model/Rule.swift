@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Rule: Identifiable, ObservableObject {
+class Rule: Identifiable, ObservableObject, Codable {
     private var category: AppCategory
     private var weekday: [DayOptions]
     private var start: Time
@@ -44,7 +44,7 @@ extension Rule {
     }
 }
 
-struct DayOptions: OptionSet {
+struct DayOptions: OptionSet, Codable {
     let rawValue: Int
 }
 

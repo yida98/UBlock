@@ -70,4 +70,14 @@ extension URL {
         }
         return nil
     }
+    
+    func asData() -> Data? {
+        do {
+            let data = try Data(contentsOf: self)
+            return data
+        } catch {
+            debugPrint(error)
+        }
+        return nil
+    }
 }

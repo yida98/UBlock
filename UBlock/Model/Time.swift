@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Time {
+struct Time: Codable {
     var hour: Int
     var min: Int
     var sec: Int = 0

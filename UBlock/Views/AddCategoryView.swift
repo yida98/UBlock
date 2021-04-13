@@ -14,8 +14,10 @@ struct AddCategoryView: View {
         TextField("Category Name", text: $name)
         ScrollView {
             ForEach(UserDefaults.apps, id: \.self) { app in
-                Image(nsImage: app.image ?? NSImage(contentsOf: Constants.sampleIconURL)!)
-                Text(app.name)
+                VStack {
+                    Image(nsImage: app.getImage() ?? NSImage(contentsOf: Constants.sampleIconURL)!)
+                    Text(app.name)
+                }
             }
         }
     }

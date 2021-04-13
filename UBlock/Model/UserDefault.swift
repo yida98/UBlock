@@ -9,34 +9,35 @@ import Foundation
 import AppKit
 
 @propertyWrapper
-struct UserDefault<Value> {
-    let key: UserDefault.Keys
+struct UserDefault<Value: Codable> {
+    let key: String
     let defaultValue: Value
     var container: UserDefaults = .standard
     
     var wrappedValue: Value {
         get {
-            return container.object(forKey: key.rawValue) as? Value ?? defaultValue
+            return container.object(forKey: key) as? Value ?? defaultValue
         }
         set {
-            container.setValue(newValue, forKey: key.rawValue)
+            container.setValue(newValue, forKey: key)
         }
-    }
-    enum Keys: String {
-        case appCategories
-        case rules
-        case apps
     }
 }
 
 extension UserDefaults {
     
-    @UserDefault(key: .appCategories, defaultValue: [AppCategory]())
+    @UserDefault(key: UserDefaults.Keys.appCategories.rawValue, defaultValue: [AppCategory]())
     static var appCategories: [AppCategory]
     
-    @UserDefault(key: .rules, defaultValue: [Rule]())
+    @UserDefault(key: UserDefaults.Keys.rules.rawValue, defaultValue: [Rule]())
     static var rules: [Rule]
     
-    @UserDefault(key: .apps, defaultValue: AlphabetizedList<AppFile>())
+    @UserDefault(key: UserDefaults.Keys.apps.rawValue, defaultValue: AlphabetizedList<AppFile>())
     static var apps: AlphabetizedList<AppFile>
+    
+    enum Keys: String {
+        case appCategories = "appCategories"
+        case rules = "rules"
+        case apps = "apps"
+    }
 }

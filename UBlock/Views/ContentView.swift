@@ -16,12 +16,6 @@ struct ContentView: View {
             NavigationView {
                 VStack {
                     CategoryView()
-                    ScrollView {
-                        ForEach(viewModel.apps, id: \.self) { app in
-                            Image(nsImage: app.image ?? NSImage(contentsOf: Constants.sampleIconURL)!)
-                            Text(app.name)
-                        }
-                    }
                 }
             }
             RulesView().environmentObject(RulesViewModel(rules: [Rule(category: AppCategory(name: "Entertainment"), weekday: [.weekday], start: Time(hour: 0, min: 0, sec: 0), end: Time(hour: 3, min: 0, sec: 0))]))

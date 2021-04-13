@@ -22,8 +22,10 @@ class AppFinder {
                 let filteredResults = results.filter { $0.path.hasSuffix(".app") }
 
                 for appURL in filteredResults {
-                    let appFile = AppFile(name: AppFinder.fileManager.displayName(atPath: appURL.path), image: getAppIcon(url: appURL))
-                    UserDefaults.apps.insert(appFile)
+                    let appFile = AppFile(name: AppFinder.fileManager.displayName(atPath: appURL.path), image: getAppIconURL(from: appURL))
+                    var currApps = UserDefaults.apps
+                    currApps.insert(appFile)
+                    UserDefaults.apps = currApps
                 }
                 return true
             } catch {
@@ -42,7 +44,7 @@ class AppFinder {
         
     }
     
-    static private func getAppIcon(url: URL) -> NSImage {
+    static private func getAppIconURL(from url: URL) -> URL? {
         if let infoPlistURL = findInfoPlist(appURL: url) {
             var name: String?
             if let iFile = getPlistObject(infoPlistURL, key: CFBundleKey.CFBundleIconFile.rawValue) as? String {
@@ -57,15 +59,11 @@ class AppFinder {
                 }
                 
                 if let iconURL = AppFinder.fileManager.recursiveGetFirstOccurence(url, matchRules: [iconRule]) {
-                    if let image = iconURL.asNSImage() {
-                        return image
-                    } else { debugPrint("[ERROR] Could not produce image from \(iconURL.path)!!")}
+                    return iconURL
                 } else {
                     let wildIconRule = FileRule(value: ".icns", rule: .endsWith)
                     if let iconURL = AppFinder.fileManager.recursiveGetFirstOccurence(url, matchRules: [wildIconRule]) {
-                        if let image = iconURL.asNSImage() {
-                            return image
-                        } else { debugPrint("[ERROR] Could not produce image from \(iconURL.path)!!")}
+                        return iconURL
                     }
                     debugPrint("[ERROR] Could not find \(iconName) for \(url)")
                 }
@@ -73,7 +71,7 @@ class AppFinder {
             }
         }
         
-        return NSImage()
+        return nil
     }
     
     static private func findInfoPlist(appURL: URL) -> URL? {
