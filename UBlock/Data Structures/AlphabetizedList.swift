@@ -37,19 +37,17 @@ extension AlphabetizedList: Collection {
 
 }
 
-extension AlphabetizedList where T: Named {
-    
-    mutating func insert(_ item: T) {
-        alphaList.append(item)
-        alphaList.sort { $0.name.lowercased() < $1.name.lowercased() }
-    }
-}
-
 extension AlphabetizedList: RandomAccessCollection {
     
 }
 
-extension AlphabetizedList where T: Indexed {
+extension AlphabetizedList where T: Indexed & Named {
+    
+    mutating func insert(_ item: T) {
+        alphaList.append(item)
+        alphaList.sort { $0.name.lowercased() < $1.name.lowercased() }
+        reindex()
+    }
     
     mutating func reindex() {
         var i = 0

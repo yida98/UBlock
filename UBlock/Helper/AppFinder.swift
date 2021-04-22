@@ -13,7 +13,7 @@ class AppFinder {
     static private let fileManager = FileManager.default
     
     static func findApps() -> Bool {
-        
+        // TODO: Alphabetized SET!!
         let applicationsURLs = AppFinder.fileManager.urls(for: .allApplicationsDirectory, in: .allDomainsMask)
         let filteredURLs = applicationsURLs.filter { fileManager.fileExists(atPath: $0.path) }
         for filteredURL in filteredURLs {
@@ -22,9 +22,11 @@ class AppFinder {
                 let filteredResults = results.filter { $0.path.hasSuffix(".app") }
 
                 for appURL in filteredResults {
-                    let appFile = AppFile(name: AppFinder.fileManager.displayName(atPath: appURL.path), image: getAppIconURL(from: appURL))
-                    
-                    Storage.shared.apps.insert(appFile)
+                    if !Storage.shared.urls.keys.contains(appURL) {
+                        let appFile = AppFile(name: AppFinder.fileManager.displayName(atPath: appURL.path), image: getAppIconURL(from: appURL))
+                        Storage.shared.urls[appURL] = appFile
+                        Storage.shared.apps.insert(appFile)
+                    }
                 }
                 return true
             } catch {

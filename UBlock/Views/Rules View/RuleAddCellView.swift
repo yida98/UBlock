@@ -9,11 +9,12 @@ import SwiftUI
 
 struct RuleAddCellView: View {
     @EnvironmentObject var viewModel: RulesViewModel
+    @ObservedObject var storage = Storage.shared
     var body: some View {
         VStack(alignment: .leading) {
             HStack (alignment: .top){
                 Text("No")
-                DropDownPicker<AppCategory>(list: viewModel.appCategories)
+                DropDownPicker<AppCategory>(list: Array(storage.appCategories))
             }.zIndex(1)
             Button("Done") {
                 

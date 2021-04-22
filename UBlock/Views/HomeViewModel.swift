@@ -17,6 +17,8 @@ class HomeViewModel: ObservableObject {
     private let fileManager = FileManager.default
     
     init() {
+        Storage.shared.apps = AlphabetizedList<AppFile>()
+        Storage.shared.urls = Dictionary<URL, AppFile>()
         AppFinder.findApps()
     }
         

@@ -44,6 +44,7 @@ struct UserDefault<Value: Codable> {
         case appCategories = "appCategories"
         case rules = "rules"
         case apps = "apps"
+        case urls = "urls"
     }
 }
 
@@ -53,8 +54,8 @@ final class Storage: ObservableObject {
     
     var objectWillChange = PassthroughSubject<Void, Never>()
     
-    @UserDefault(.appCategories, defaultValue: [AppCategory]())
-    var appCategories: [AppCategory] {
+    @UserDefault(.appCategories, defaultValue: Set<AppCategory>())
+    var appCategories: Set<AppCategory> {
         willSet {
             objectWillChange.send()
         }
@@ -69,6 +70,13 @@ final class Storage: ObservableObject {
     
     @UserDefault(.apps, defaultValue: AlphabetizedList<AppFile>())
     var apps: AlphabetizedList<AppFile> {
+        willSet {
+            objectWillChange.send()
+        }
+    }
+    
+    @UserDefault(.urls, defaultValue: Dictionary<URL, AppFile>())
+    var urls: Dictionary<URL, AppFile> {
         willSet {
             objectWillChange.send()
         }

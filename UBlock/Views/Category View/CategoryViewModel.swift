@@ -8,5 +8,5 @@
 import Foundation
 
 class CategoryViewModel: ObservableObject {
-    @Published var storage = Storage.shared
+
 }

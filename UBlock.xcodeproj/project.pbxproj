@@ -93,11 +93,8 @@
 			children = (
 				E42BDCA1258B279B0088DB09 /* ContentView.swift */,
 				E4126CD9261531BA0085702F /* HomeViewModel.swift */,
-				E40D8585261BBA37004476CE /* AppCellView.swift */,
-				E40D8588261BBB77004476CE /* AppSelectionView.swift */,
-				E41F38482621938000347924 /* CategoryView.swift */,
-				E4DC8F5D263147F100489000 /* CategoryViewModel.swift */,
-				E4F0A9E72624E8C400EABE6A /* AddCategoryView.swift */,
+				E4DC8F61263166F000489000 /* App View */,
+				E4DC8F63263166FF00489000 /* Category View */,
 				E41F3840262169CB00347924 /* Rules View */,
 				E4AC5A53262012BE006A2789 /* Drop Down */,
 			);
@@ -107,6 +104,7 @@
 		E4126CD62615120E0085702F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E47DFE282615910E0055D770 /* AppFile.swift */,
 				E40D8591261BC6DC004476CE /* Rule.swift */,
 				E40D8594261BCFA6004476CE /* AppCategory.swift */,
 				E4AC5A45261EDB05006A2789 /* UserDefault.swift */,
@@ -132,7 +130,6 @@
 				E479BC3F26169CA900292B18 /* Queue.swift */,
 				E47DFE2B261595690055D770 /* Named+Indexed.swift */,
 				E47DFE252615905E0055D770 /* AlphabetizedList.swift */,
-				E47DFE282615910E0055D770 /* AppFile.swift */,
 			);
 			path = "Data Structures";
 			sourceTree = "<group>";
@@ -198,6 +195,25 @@
 				E4AC5A4F26200DF1006A2789 /* DropDownViewModel.swift */,
 			);
 			path = "Drop Down";
+			sourceTree = "<group>";
+		};
+		E4DC8F61263166F000489000 /* App View */ = {
+			isa = PBXGroup;
+			children = (
+				E40D8588261BBB77004476CE /* AppSelectionView.swift */,
+				E40D8585261BBA37004476CE /* AppCellView.swift */,
+			);
+			path = "App View";
+			sourceTree = "<group>";
+		};
+		E4DC8F63263166FF00489000 /* Category View */ = {
+			isa = PBXGroup;
+			children = (
+				E41F38482621938000347924 /* CategoryView.swift */,
+				E4DC8F5D263147F100489000 /* CategoryViewModel.swift */,
+				E4F0A9E72624E8C400EABE6A /* AddCategoryView.swift */,
+			);
+			path = "Category View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
