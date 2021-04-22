@@ -14,7 +14,7 @@ class RulesViewModel: ObservableObject {
     
     init(rules: [Rule]) {
         self.rules = rules
-        self.appCategories = UserDefaults.appCategories
+        self.appCategories = Storage.shared.appCategories
     }
     
 }

@@ -23,9 +23,8 @@ class AppFinder {
 
                 for appURL in filteredResults {
                     let appFile = AppFile(name: AppFinder.fileManager.displayName(atPath: appURL.path), image: getAppIconURL(from: appURL))
-                    var currApps = UserDefaults.apps
-                    currApps.insert(appFile)
-                    UserDefaults.apps = currApps
+                    
+                    Storage.shared.apps.insert(appFile)
                 }
                 return true
             } catch {

@@ -8,7 +8,7 @@
 import Foundation
 import AppKit
 
-struct AlphabetizedList<T: Named> {
+struct AlphabetizedList<T: Codable>: Codable {
     typealias AlphaType = [T]
     
     private var alphaList: AlphaType
@@ -37,7 +37,7 @@ extension AlphabetizedList: Collection {
 
 }
 
-extension AlphabetizedList {
+extension AlphabetizedList where T: Named {
     
     mutating func insert(_ item: T) {
         alphaList.append(item)

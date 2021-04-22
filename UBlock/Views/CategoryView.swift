@@ -24,7 +24,7 @@ struct CategoryView: View {
             if adding {
                 TextField("Category Name", text: $addingField)
             }
-            ForEach(UserDefaults.appCategories, id: \.self) { category in
+            ForEach(Storage.shared.appCategories, id: \.self) { category in
                 Text(category.name)
             }
         }
