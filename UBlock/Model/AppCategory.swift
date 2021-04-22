@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AppCategory: Pickable, Codable {
+struct AppCategory: Pickable, Codable, Equatable {
     
     var id: String { name }
     

@@ -23,16 +23,10 @@ struct UserDefault<Value: Codable> {
     var wrappedValue: Value {
         get {
             let obj = container.object(forKey: key.rawValue)
-            if let rtnObj = obj as? Value {
-                return rtnObj
-            } else {
-                do {
-                    if let dataObj = obj as? Data {
-                        return try JSONDecoder().decode(Value.self, from: dataObj)
-                    }
-                } catch {
-                    debugPrint(error)
-                }
+            if let valueObj = obj as? Value {
+                return valueObj
+            } else if let dataObj = obj as? Data {
+                return try! JSONDecoder().decode(Value.self, from: dataObj)
             }
             return defaultValue
         }
@@ -57,27 +51,26 @@ final class Storage: ObservableObject {
     
     static let shared = Storage()
     
-    private let appCategoriesPublisher = PassthroughSubject<Void, Never>()
+    var objectWillChange = PassthroughSubject<Void, Never>()
+    
     @UserDefault(.appCategories, defaultValue: [AppCategory]())
     var appCategories: [AppCategory] {
         willSet {
-            appCategoriesPublisher.send()
+            objectWillChange.send()
         }
     }
     
-    private let rulesPublisher = PassthroughSubject<Void, Never>()
     @UserDefault(.rules, defaultValue: [Rule]())
     var rules: [Rule] {
         willSet {
-            rulesPublisher.send()
+            objectWillChange.send()
         }
     }
     
-    private let appsPublisher = PassthroughSubject<Void, Never>()
     @UserDefault(.apps, defaultValue: AlphabetizedList<AppFile>())
     var apps: AlphabetizedList<AppFile> {
         willSet {
-            appsPublisher.send()
+            objectWillChange.send()
         }
     }
     
