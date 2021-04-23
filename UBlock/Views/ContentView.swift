@@ -15,7 +15,7 @@ struct ContentView: View {
         HStack {
             NavigationView {
                 VStack {
-                    CategoryView()
+                    CategoryView().environmentObject(CategoryViewModel())
                 }
             }
             RulesView().environmentObject(RulesViewModel(rules: [Rule(category: AppCategory(name: "Entertainment"), weekday: [.weekday], start: Time(hour: 0, min: 0, sec: 0), end: Time(hour: 3, min: 0, sec: 0))]))

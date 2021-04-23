@@ -9,8 +9,7 @@ import SwiftUI
 
 struct CategoryView: View {
     
-    @State var adding: Bool = false
-    @State var addingField: String = ""
+    @EnvironmentObject var viewModel: CategoryViewModel
     
     @ObservedObject var storage = Storage.shared
     
@@ -20,20 +19,20 @@ struct CategoryView: View {
                 Text("Hello, world!")
                     .padding()
                 Button("+") {
-                    adding = true
+                    viewModel.adding = true
                 }
             }
-            if adding {
+            if viewModel.adding {
                 VStack {
-                    TextField("Category Name", text: $addingField)
+                    TextField("Category Name", text: $viewModel.addingText)
                     AppSelectionView()
                     Button("Done") {
-                        let newCategory = AppCategory(name: addingField)
+                        let newCategory = AppCategory(name: viewModel.addingText)
                         Storage.shared.appCategories.insert(newCategory)
 
-                        addingField = ""
-                        adding.toggle()
-                    }
+                        viewModel.addingText = ""
+                        viewModel.adding.toggle()
+                    }.disabled(!viewModel.isValid)
                 }
                 .padding()
             }
