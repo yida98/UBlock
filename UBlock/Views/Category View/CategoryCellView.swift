@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CategoryCellView: View {
     
-    @ObservedObject var category: AppCategory
+    var category: AppCategory
     
     var body: some View {
         VStack {

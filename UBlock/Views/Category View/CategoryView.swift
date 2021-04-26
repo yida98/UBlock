@@ -26,11 +26,7 @@ struct CategoryView: View {
                 AddCategoryView().environmentObject(viewModel)
             }
             ForEach(Array(storage.appCategories), id: \.self) { category in
-                VStack {
-                    HStack {
-                        Text(category.name)
-                    }
-                }
+                CategoryCellView(category: category)
                     .contextMenu(ContextMenu(menuItems: {
                         Button("Delete") {
                             Storage.removeAppCategory(category)

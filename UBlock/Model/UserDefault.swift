@@ -100,8 +100,10 @@ final class Storage: ObservableObject {
     }
     
     static func removeAppCategory(_ category: AppCategory) {
-        Storage.shared.appCategories.remove(category)
-        Storage.shared.appCategoryNames.remove(category.name)
+        if let firstId = Storage.shared.appCategories.firstIndex(where: { $0.name == category.name }) {
+            Storage.shared.appCategories.remove(at: firstId)
+            Storage.shared.appCategoryNames.remove(category.name)
+        }
     }
     
 }

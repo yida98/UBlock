@@ -7,12 +7,12 @@
 
 import Foundation
 
-class AppCategory: Pickable, Indexed, ObservableObject, Codable {
+struct AppCategory: Pickable, Indexed, Codable {
     
-    @Published var id: Int = 0
+    var id: Int = 0
     
-    @Published var name: String
-    @Published var apps: [URL] = [URL]()
+    var name: String
+    var apps: [URL] = [URL]()
     
     init(name: String, apps: [URL] = [URL]()) {
         self.name = name
@@ -31,7 +31,7 @@ class AppCategory: Pickable, Indexed, ObservableObject, Codable {
         case apps
     }
     
-    required init(from decoder: Decoder) throws {
+    init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(Int.self, forKey: .id)
         self.name = try container.decode(String.self, forKey: .name)
