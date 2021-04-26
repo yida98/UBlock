@@ -49,6 +49,18 @@ extension AlphabetizedList where T: Indexed & Named {
         reindex()
     }
     
+    mutating func remove(at index: Int) -> Element {
+        let item = alphaList[index]
+        alphaList.remove(at: index)
+        reindex()
+        return item
+    }
+    
+    mutating func remove(_ element: Element) {
+        alphaList = alphaList.filter { $0.name == element.name }
+        reindex()
+    }
+    
     mutating func reindex() {
         var i = 0
         while i < alphaList.count {

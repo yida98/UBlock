@@ -23,29 +23,17 @@ struct CategoryView: View {
                 }
             }
             if viewModel.adding {
-                VStack {
-                    TextField("Category Name", text: $viewModel.addingText)
-                    AppSelectionView()
-                    Button("Done") {
-                        let newCategory = AppCategory(name: viewModel.addingText)
-                        Storage.shared.appCategories.insert(newCategory)
-
-                        viewModel.addingText = ""
-                        viewModel.adding.toggle()
-                    }.disabled(!viewModel.isValid)
-                }
-                .padding()
+                AddCategoryView().environmentObject(viewModel)
             }
             ForEach(Array(storage.appCategories), id: \.self) { category in
-                Text(category.name)
+                VStack {
+                    HStack {
+                        Text(category.name)
+                    }
+                }
                     .contextMenu(ContextMenu(menuItems: {
                         Button("Delete") {
-                            if let item = Storage.shared.appCategories.firstIndex(of: category) {
-                                Storage.shared.appCategories.remove(at: item)
-                            } else {
-                                // Should never come here, but if you're here, dw
-                                debugPrint("Can't find this category")
-                            }
+                            Storage.removeAppCategory(category)
                         }
                     }))
             }

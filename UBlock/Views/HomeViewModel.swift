@@ -18,7 +18,9 @@ class HomeViewModel: ObservableObject {
     
     init() {
         Storage.shared.apps = AlphabetizedList<AppFile>()
+        Storage.shared.appCategoryNames = Set<String>()
         Storage.shared.urls = Dictionary<URL, AppFile>()
+        Storage.shared.appCategories = AlphabetizedList<AppCategory>()
         AppFinder.findApps()
     }
         

@@ -17,11 +17,11 @@ class CategoryViewModel: ObservableObject {
     
     private var cancellable = Set<AnyCancellable>()
     
-    var validCheck: AnyPublisher<Bool, Never> {
+    private var validCheck: AnyPublisher<Bool, Never> {
         return CurrentValueSubject<Bool, Never>(false)
             .combineLatest($otherValue, $addingText)
             .map { result in
-                return result.1 && (result.2.count > 0)
+                return result.1 && (result.2.count > 0) && AppCategory.validity(for: result.2)
             }
             .eraseToAnyPublisher()
     }
@@ -33,5 +33,14 @@ class CategoryViewModel: ObservableObject {
                 self.isValid = value
             }
             .store(in: &cancellable)
+    }
+    
+    func finish(_ isDone: Bool = false) {
+        if isDone {
+            let newCategory = AppCategory(name: addingText)
+            Storage.insert(newCategory)
+        }
+        addingText = ""
+        adding = false
     }
 }

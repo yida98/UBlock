@@ -35,6 +35,7 @@
 		E4AC5A46261EDB05006A2789 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC5A45261EDB05006A2789 /* UserDefault.swift */; };
 		E4AC5A49261FB659006A2789 /* DropDownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC5A48261FB659006A2789 /* DropDownList.swift */; };
 		E4AC5A5026200DF1006A2789 /* DropDownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC5A4F26200DF1006A2789 /* DropDownViewModel.swift */; };
+		E4B2FDC12633845100A8CEAE /* CategoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B2FDC02633845100A8CEAE /* CategoryCellView.swift */; };
 		E4DC8F5E263147F100489000 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8F5D263147F100489000 /* CategoryViewModel.swift */; };
 		E4F0A9E82624E8C400EABE6A /* AddCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0A9E72624E8C400EABE6A /* AddCategoryView.swift */; };
 		E4F0A9EB2624EB1F00EABE6A /* AppFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0A9EA2624EB1F00EABE6A /* AppFinder.swift */; };
@@ -72,6 +73,7 @@
 		E4AC5A45261EDB05006A2789 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		E4AC5A48261FB659006A2789 /* DropDownList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownList.swift; sourceTree = "<group>"; };
 		E4AC5A4F26200DF1006A2789 /* DropDownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownViewModel.swift; sourceTree = "<group>"; };
+		E4B2FDC02633845100A8CEAE /* CategoryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellView.swift; sourceTree = "<group>"; };
 		E4DC8F5D263147F100489000 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		E4F0A9E72624E8C400EABE6A /* AddCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryView.swift; sourceTree = "<group>"; };
 		E4F0A9EA2624EB1F00EABE6A /* AppFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFinder.swift; sourceTree = "<group>"; };
@@ -93,7 +95,6 @@
 			children = (
 				E42BDCA1258B279B0088DB09 /* ContentView.swift */,
 				E4126CD9261531BA0085702F /* HomeViewModel.swift */,
-				E4DC8F61263166F000489000 /* App View */,
 				E4DC8F63263166FF00489000 /* Category View */,
 				E41F3840262169CB00347924 /* Rules View */,
 				E4AC5A53262012BE006A2789 /* Drop Down */,
@@ -209,9 +210,11 @@
 		E4DC8F63263166FF00489000 /* Category View */ = {
 			isa = PBXGroup;
 			children = (
-				E41F38482621938000347924 /* CategoryView.swift */,
 				E4DC8F5D263147F100489000 /* CategoryViewModel.swift */,
+				E41F38482621938000347924 /* CategoryView.swift */,
+				E4B2FDC02633845100A8CEAE /* CategoryCellView.swift */,
 				E4F0A9E72624E8C400EABE6A /* AddCategoryView.swift */,
+				E4DC8F61263166F000489000 /* App View */,
 			);
 			path = "Category View";
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				E47DFE2C261595690055D770 /* Named+Indexed.swift in Sources */,
 				E4AC5A5026200DF1006A2789 /* DropDownViewModel.swift in Sources */,
 				E4F0A9E82624E8C400EABE6A /* AddCategoryView.swift in Sources */,
+				E4B2FDC12633845100A8CEAE /* CategoryCellView.swift in Sources */,
 				E47DFE292615910E0055D770 /* AppFile.swift in Sources */,
 				E40D8586261BBA37004476CE /* AppCellView.swift in Sources */,
 				E4DC8F5E263147F100489000 /* CategoryViewModel.swift in Sources */,

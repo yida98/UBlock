@@ -10,16 +10,24 @@ import SwiftUI
 struct AddCategoryView: View {
     
     @State var name: String = ""
+    @EnvironmentObject var viewModel: CategoryViewModel
+    
     var body: some View {
-        TextField("Category Name", text: $name)
-        ScrollView {
-            ForEach(Storage.shared.apps, id: \.self) { app in
-                VStack {
-                    Image(nsImage: app.getImage() ?? NSImage(contentsOf: Constants.sampleIconURL)!)
-                    Text(app.name)
+            VStack {
+                TextField("New Category", text: $viewModel.addingText)
+                AppSelectionView()
+                HStack {
+                    
+                    Button("Done") {
+                        viewModel.finish(true)
+                    }.disabled(!viewModel.isValid)
+                    
+                    Button("Cancel") {
+                        viewModel.finish()
+                    }
                 }
             }
-        }
+            .padding()
     }
 }
 

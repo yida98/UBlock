@@ -26,7 +26,11 @@ struct UserDefault<Value: Codable> {
             if let valueObj = obj as? Value {
                 return valueObj
             } else if let dataObj = obj as? Data {
-                return try! JSONDecoder().decode(Value.self, from: dataObj)
+                do {
+                    return try JSONDecoder().decode(Value.self, from: dataObj)
+                } catch {
+                    debugPrint("\(error) \(defaultValue)")
+                }
             }
             return defaultValue
         }
@@ -42,6 +46,7 @@ struct UserDefault<Value: Codable> {
     
     enum Keys: String {
         case appCategories = "appCategories"
+        case appCategoryNames = "appCategoryNames"
         case rules = "rules"
         case apps = "apps"
         case urls = "urls"
@@ -54,8 +59,15 @@ final class Storage: ObservableObject {
     
     var objectWillChange = PassthroughSubject<Void, Never>()
     
-    @UserDefault(.appCategories, defaultValue: Set<AppCategory>())
-    var appCategories: Set<AppCategory> {
+    @UserDefault(.appCategories, defaultValue: AlphabetizedList<AppCategory>())
+    var appCategories: AlphabetizedList<AppCategory> {
+        willSet {
+            objectWillChange.send()
+        }
+    }
+    
+    @UserDefault(.appCategoryNames, defaultValue: Set<String>())
+    var appCategoryNames: Set<String> {
         willSet {
             objectWillChange.send()
         }
@@ -80,6 +92,16 @@ final class Storage: ObservableObject {
         willSet {
             objectWillChange.send()
         }
+    }
+    
+    static func insert(_ category: AppCategory) {
+        Storage.shared.appCategories.insert(category)
+        Storage.shared.appCategoryNames.insert(category.name)
+    }
+    
+    static func removeAppCategory(_ category: AppCategory) {
+        Storage.shared.appCategories.remove(category)
+        Storage.shared.appCategoryNames.remove(category.name)
     }
     
 }
