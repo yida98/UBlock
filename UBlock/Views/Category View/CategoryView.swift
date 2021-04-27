@@ -17,7 +17,8 @@ struct CategoryView: View {
         VStack {
             HStack {
                 Text("Hello, world!")
-                    .padding()
+                    .font(.title)
+                Spacer()
                 Button("+") {
                     viewModel.adding = true
                 }
@@ -27,13 +28,8 @@ struct CategoryView: View {
             }
             ForEach(Array(storage.appCategories), id: \.self) { category in
                 CategoryCellView(category: category)
-                    .contextMenu(ContextMenu(menuItems: {
-                        Button("Delete") {
-                            Storage.removeAppCategory(category)
-                        }
-                    }))
             }
-        }
+        }.padding(30)
     }
 }
 

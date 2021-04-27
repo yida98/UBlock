@@ -12,12 +12,15 @@ struct AppCategory: Pickable, Indexed, Codable {
     var id: Int = 0
     
     var name: String
-    var apps: [URL] = [URL]()
+    var apps: [URL]
+    var limit: Int?
     
     init(name: String, apps: [URL] = [URL]()) {
         self.name = name
         self.apps = apps
+        
     }
+    
     static func validity(for name: String) -> Bool {
         return !Storage.shared.appCategoryNames.contains(name)
     }
@@ -25,25 +28,6 @@ struct AppCategory: Pickable, Indexed, Codable {
     func hash(into hasher: inout Hasher) {
     }
     
-    private enum CodingKeys: String, CodingKey {
-        case id
-        case name
-        case apps
-    }
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(Int.self, forKey: .id)
-        self.name = try container.decode(String.self, forKey: .name)
-        self.apps = try container.decode([URL].self, forKey: .apps)
-    }
-    
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(self.id, forKey: .id)
-        try container.encode(self.name, forKey: .name)
-        try container.encode(self.apps, forKey: .apps)
-    }
 }
 
 extension AppCategory: Equatable {
@@ -55,4 +39,17 @@ extension AppCategory: Equatable {
 }
 
 protocol Pickable: Hashable, Identifiable, Named {
+}
+
+extension String: Pickable {
+    public var id: String { self }
+    
+    var name: String {
+        get {
+            return self
+        }
+        set {
+            self = newValue
+        }
+    }
 }

@@ -15,6 +15,10 @@ class CategoryViewModel: ObservableObject {
     @Published var otherValue: Bool = true
     @Published var isValid: Bool = false
     
+    @Published var limitHr: String = ""
+    @Published var limitMin: String = ""
+    @Published var hasLimit: Bool = false
+    
     private var cancellable = Set<AnyCancellable>()
     
     private var validCheck: AnyPublisher<Bool, Never> {

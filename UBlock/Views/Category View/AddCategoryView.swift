@@ -13,21 +13,30 @@ struct AddCategoryView: View {
     @EnvironmentObject var viewModel: CategoryViewModel
     
     var body: some View {
-            VStack {
-                TextField("New Category", text: $viewModel.addingText)
-                AppSelectionView()
-                HStack {
-                    
-                    Button("Done") {
-                        viewModel.finish(true)
-                    }.disabled(!viewModel.isValid)
-                    
-                    Button("Cancel") {
-                        viewModel.finish()
-                    }
-                }
+        VStack {
+            TextField("New Category", text: $viewModel.addingText)
+            HStack {
+                TextField("Hours", text: $viewModel.limitHr)
+                TextField("Minutes", text: $viewModel.limitMin)
+                Text("Per")
+                DropDownPicker(list: Constants.magnitude, selection: Constants.magnitude.first ?? Constants.selectionDefault)
             }
-            .padding()
+            AppSelectionView()
+            HStack {
+                Spacer()
+                Button("Cancel") {
+                    viewModel.finish()
+                }.padding()
+                
+                Button("Done") {
+                    viewModel.finish(true)
+                }.disabled(!viewModel.isValid)
+                
+            }
+        }
+        .padding()
+        .background(Color.lightGrey3.blur(radius: 20, opaque: false))
+        .cornerRadius(20)
     }
 }
 

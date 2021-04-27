@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PickerItemView<T: Pickable>: View {
+struct PickerItemView<T: Named>: View {
     
     @State var isHovering: Bool = false
     var item: T

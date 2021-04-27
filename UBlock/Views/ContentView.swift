@@ -16,6 +16,8 @@ struct ContentView: View {
             NavigationView {
                 VStack {
                     CategoryView().environmentObject(CategoryViewModel())
+                    LogView()
+                    Spacer()
                 }
             }
             RulesView().environmentObject(RulesViewModel(rules: [Rule(category: AppCategory(name: "Entertainment"), weekday: [.weekday], start: Time(hour: 0, min: 0, sec: 0), end: Time(hour: 3, min: 0, sec: 0))]))

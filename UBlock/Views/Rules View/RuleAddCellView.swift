@@ -14,7 +14,7 @@ struct RuleAddCellView: View {
         VStack(alignment: .leading) {
             HStack (alignment: .top){
                 Text("No")
-                DropDownPicker<AppCategory>(list: Array(storage.appCategories))
+                DropDownPicker<AppCategory>(list: Array(storage.appCategories), size: .large)
             }.zIndex(1)
             Button("Done") {
                 

@@ -12,13 +12,13 @@ struct DropDownPicker<T: Pickable>: View {
 //    @EnvironmentObject var viewModel: DropDownViewModel<T>
     
     var list: Array<T>
-    @State var selection: String = " "
-    
+    var size: Size = .small
+    @State var selection: String = Constants.selectionDefault
     @State var overlaying: Bool = false
         
     var body: some View {
         Text(selection)
-            .frame(width: Constants.boundWidth)
+            .frame(width: size == Size.small ? 80 : 200)
             .background(Color.white)
             .onTapGesture {
                 overlaying.toggle()
