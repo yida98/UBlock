@@ -13,14 +13,17 @@ struct AddCategoryView: View {
     @EnvironmentObject var viewModel: CategoryViewModel
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             TextField("New Category", text: $viewModel.addingText)
+            Text("Limit")
+                .font(.title2)
             HStack {
                 TextField("Hours", text: $viewModel.limitHr)
                 TextField("Minutes", text: $viewModel.limitMin)
                 Text("Per")
                 DropDownPicker(list: Constants.magnitude, selection: Constants.magnitude.first ?? Constants.selectionDefault)
-            }
+            }.disabled(viewModel.hasLimit)
+            Toggle("No limit", isOn: $viewModel.hasLimit)
             AppSelectionView()
             HStack {
                 Spacer()
