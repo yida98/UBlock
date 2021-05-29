@@ -64,6 +64,7 @@
 		E42BDCA6258B279C0088DB09 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E42BDCA8258B279C0088DB09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E42BDCA9258B279C0088DB09 /* UBlock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UBlock.entitlements; sourceTree = "<group>"; };
+		E471E37F2662135900CD2613 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E479BC3B26167CC500292B18 /* URL+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+ext.swift"; sourceTree = "<group>"; };
 		E479BC3F26169CA900292B18 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		E479BC422616C64B00292B18 /* FileManager+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+ext.swift"; sourceTree = "<group>"; };
@@ -111,7 +112,6 @@
 				E47DFE282615910E0055D770 /* AppFile.swift */,
 				E40D8591261BC6DC004476CE /* Rule.swift */,
 				E40D8594261BCFA6004476CE /* AppCategory.swift */,
-				E4AC5A45261EDB05006A2789 /* UserDefault.swift */,
 				E40D8597261BD3A0004476CE /* Time.swift */,
 			);
 			path = Model;
@@ -141,9 +141,6 @@
 		E42A27BE2616FA8A0019D941 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				E479BC422616C64B00292B18 /* FileManager+ext.swift */,
-				E479BC3B26167CC500292B18 /* URL+ext.swift */,
-				E40D859A261C09C2004476CE /* Color+ext.swift */,
 				E4F0A9EA2624EB1F00EABE6A /* AppFinder.swift */,
 				E47DFE2F2615AC070055D770 /* Constants.swift */,
 			);
@@ -153,6 +150,7 @@
 		E42BDC93258B279B0088DB09 = {
 			isa = PBXGroup;
 			children = (
+				E471E37F2662135900CD2613 /* README.md */,
 				E42BDC9E258B279B0088DB09 /* UBlock */,
 				E42BDC9D258B279B0088DB09 /* Products */,
 			);
@@ -174,6 +172,8 @@
 				E42A27BC2616FA430019D941 /* Data Structures */,
 				E42A27BE2616FA8A0019D941 /* Helper */,
 				E4126CD62615120E0085702F /* Model */,
+				E471E37D2662124900CD2613 /* Utils */,
+				E471E37E2662132F00CD2613 /* Extensions */,
 				E42BDCA3258B279C0088DB09 /* Assets.xcassets */,
 				E42BDCA8258B279C0088DB09 /* Info.plist */,
 				E42BDCA9258B279C0088DB09 /* UBlock.entitlements */,
@@ -188,6 +188,24 @@
 				E42BDCA6258B279C0088DB09 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E471E37D2662124900CD2613 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E4AC5A45261EDB05006A2789 /* UserDefault.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E471E37E2662132F00CD2613 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E479BC422616C64B00292B18 /* FileManager+ext.swift */,
+				E479BC3B26167CC500292B18 /* URL+ext.swift */,
+				E40D859A261C09C2004476CE /* Color+ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E4AC5A53262012BE006A2789 /* Drop Down */ = {
