@@ -22,7 +22,7 @@ struct ContentView: View {
             }.toolbar {
                 ToolbarItem(placement: ToolbarItemPlacement.navigation) {
                     Button(action: {
-                        
+                        HomeViewModel.toggleSidebar()
                     }) {
                         Image(systemName: "sidebar.left")
                     }

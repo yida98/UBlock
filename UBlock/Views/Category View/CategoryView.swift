@@ -23,13 +23,14 @@ struct CategoryView: View {
                     viewModel.adding = true
                 }
             }
-            if viewModel.adding {
-                AddCategoryView().environmentObject(viewModel)
-            }
             ForEach(Array(storage.appCategories), id: \.self) { category in
                 CategoryCellView(category: category)
             }
         }.padding(30)
+        .sheet(isPresented: $viewModel.adding) {
+            AddCategoryView()
+                .environmentObject(viewModel)
+        }
     }
 }
 

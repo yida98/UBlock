@@ -18,6 +18,10 @@ struct Constants {
     static let selectionDefault = " "
 }
 
+struct UIConstants {
+    static let iconFrameSize = CGSize(width: 20, height: 20)
+}
+
 enum CFBundleKey: String {
     case CFBundleIconFile
     case CFBundleIconName

@@ -12,6 +12,8 @@ struct RulesView: View {
     @EnvironmentObject var viewModel: RulesViewModel
     @State var adding: Bool = false
     
+//    @State var selection: Rule
+    
     var body: some View {
         VStack {
             HStack {
@@ -26,6 +28,9 @@ struct RulesView: View {
             if adding {
                 RuleAddCellView().environmentObject(viewModel)
             }
+//            Picker("App", selection: $selection) {
+//                <#code#>
+//            }
             ScrollView {
                 ForEach(viewModel.rules) { rule in
                     RuleCellView().environmentObject(rule)

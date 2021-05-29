@@ -13,11 +13,12 @@ struct AppCellView: View {
     @State var selected: Bool?
     
     var body: some View {
-        VStack() {
-            Spacer()
+        HStack() {
             Image(nsImage: appFile.getImage() ?? NSImage())
+                .resizable()
+                .frame(width: UIConstants.iconFrameSize.width, height: UIConstants.iconFrameSize.width)
             Text(appFile.name)
-            
+            Spacer()
         }
     }
 }
